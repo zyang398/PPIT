@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+video {
+    max-width: 100%;
+    height: auto;
+}
+</style>
+</head>
+<body>
+    <div class="w3-container" id="justanormalcolumn">
+        <br />
+        <div class="w3-center" style="height: 168px">
+            <a href="#" id="pothole">
+                <img alt="" height="161" src="images/pothole0.png" width="285" />
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            <br />
+            <br />
+        </div>
+        <div class="w3-bar w3-white ">
+            <a href="#" id="pothole1" class="w3-bar-item w3-button w3-mobile w3-white w3-border">General</a>
+            <a href="#" id="pothole2" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Project Selection</a>
+            <a href="#" id="pothole3" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Material</a>
+            <a href="#" id="pothole4" class="w3-bar-item w3-button w3-mobile w3-grey w3-border">Construction</a>
+            <a href="#" id="pothole5" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Performance</a>
+            <a href="#" id="pothole6" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Standards/References</a>
+        </div>
+        <p class="MsoNormal"><b style="mso-bidi-font-weight:normal">
+                    <u>Cold-mix<o:p></o:p></u></b></p>
+                    
+                    <h5><i>Weather Considerations</i></h5>
+                    <p class="MsoNormal">The recommended temperatures for aggregate and bituminous materials to ensure proper mixing are CMS-2: 140-160 °F (60-70 °C); PG 64-22: 300-350 °F (150-175 °C); MC-250: 100-225 °F (40-105° C); Aggregates 200-225 °F (95-105 °C)</p>
+                    <h5><i>Traffic Considerations</i></h5>
+                    <p class="MsoNormal">Pothole patching is typically a relatively quick process therefore, it should be performed using temporary traffic control measures.  In high-traffic volume areas construction may be best planned for nighttime or weekend work to minimize disruptions, but since pothole repair can sometimes be time-sensitive (depending upon the size and location of the pothole) that is not always possible.</p>
+                    <h5><i>Surface Preparation</i></h5>
+                    <p class="MsoNormal">Clean the pothole and remove all loose debris.  In most cases, the area should be dry before filling.  Application of a light amount of liquid tack may be performed before filling the pothole.</p>
+                    <p class="MsoNormal"><b style="mso-bidi-font-weight:normal">
+                    <u>Mastic Patching<o:p></o:p></u></b></p>
+                    <p class="MsoNormal">Ensure the pavement patching mastic component material is combined into a melter/applicator pot, heated, mixed and applied to the area requiring repair as recommended by the manufacturer. Ensure the material is heated no greater than 410 °F. Ensure that the equipment produces and maintains a homogenous mixture of modified asphalt binder and aggregates at a uniform temperature without gradation related or temperature related segregation in the pavement patching mastic. The material must provide a repair that can be opened to traffic once the pavement patching mastic has cooled and solidified.</p>
+                    <p class="MsoNormal"><b style="mso-bidi-font-weight:normal">
+                    <u>Spray Injection<o:p></o:p></u></b></p>
+                    <p class="MsoNormal">The spray injection method uses specialized trailer- or truck-mounted equipment to blow water and debris from the pothole, spray a tack coat into the hole, blow asphalt and aggregate together into the hole, then cover the patch with a layer of aggregate. Because the aggregate and emulsion are propelled into the patch area with high pressure air no further compaction is necessary. Spray patching can be used on asphalt or concrete pavements and is sometimes done under adverse conditions because of the speed with which it can be accomplished.</p>
+
+                    <p align="center"><video width="480" height="360" controls=controls class = "center">
+                    <source src="videos/sparyinjection.mp4" type="video/mp4" />
+                </video></p>
+                <p class="auto-style1" style="layout-grid-mode: char;" align="center">
+                    <b>Spray Injection Patching (Highwaysindustry, 2017)</b>
+<span style="font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+
+
+
+
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+
+            $(document).ready( function() {
+                $("#pothole").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole1").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole2").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole2.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole3").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole3.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole4").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole4.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole5").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole5.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole6").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole6.html");
+                });
+            });
+
+
+
+    </script>
+
+
+
+</body>
+</html>

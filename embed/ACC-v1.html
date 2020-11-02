@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="//w3.css" />
+    <link rel="stylesheet" href="//font-awesome-4.7.0/css/font-awesome.min.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .header {
+            text-align: center;
+            padding: 32px;
+        }
+
+        .row {
+            display: -ms-flexbox; /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap; /* IE10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .column {
+            -ms-flex: 25%; /* IE10 */
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+
+            .column img {
+                margin-top: 8px;
+                vertical-align: middle;
+            }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+            .column {
+                -ms-flex: 50%;
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Photo Grid -->
+    <div class="row w3-center">
+        <div class="column">
+            <a href="#" id="accchipseal">
+                <img class="w3-padding" alt="" height="130" src="images/chipseal0.png" width="180" />
+            </a>
+            <a href="#" id="acccracksealing">
+                <img class="w3-padding" alt="" height="130" src="images/cracksealing0.png" width="180" />
+            </a>
+            <a href="#" id="accfogseal">
+                <img class="w3-padding" alt="" height="130" src="images/fogseal0.png" width="180" />
+            </a>
+            <a href="#" id="accmicromilling">
+                <img class="w3-padding" alt="" height="130" src="images/micromilling0.png" width="180" />
+            </a>
+        </div>
+        <div class="column">
+            <a href="#" id="accmicrosurfacing">
+                <img class="w3-padding" alt="" height="130" src="images/microsurfacing0.png" width="180" />
+            </a>
+            <a href="#" id="accslurryseal">
+                <img class="w3-padding" alt="" height="130" src="images/slurryseal0.png" width="180" />
+            </a>
+            <a href="#" id="accthinoverlay">
+                <img class="w3-padding" alt="" height="130" src="images/thinoverlay0.png" width="180" />
+            </a>
+            <a href="#" id="accwhitetopping">
+                <img class="w3-padding" alt="" height="130" src="images/whitetopping0.png" width="180" />
+            </a>
+        </div>
+        <div class="column">
+            <a href="#" id="accpothole">
+                <img class="w3-padding" alt="" height="130" src="images/pothole0.png" width="180" />
+            </a>
+            <a href="#" id="accOGI">
+                <img class="w3-padding" alt="" height="130" src="images/OGI0.png" width="180" />
+            </a>
+            <a href="#" id="accFDRE">
+                <img class="w3-padding" alt="" height="130" src="images/FDRE0.png" width="180" />
+            </a>
+            <a href="#" id="accHIR">
+                <img class="w3-padding" alt="" height="130" src="images/HIR0.png" width="180" />
+            </a>
+        </div>
+        <div class="column">
+            <a href="#" id="accCIR">
+                <img class="w3-padding" alt="" height="130" src="images/CIR0.png" width="180" />
+            </a>
+            <a href="#" id="accultra">
+                <img class="w3-padding" alt="" height="130" src="images/ultra0.png" width="180" />
+            </a>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+
+
+
+
+            $(document).ready( function() {
+                $("#accchipseal").on("click", function() {
+                    $("#contentcolumn").load("embed/chipseal.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#acccracksealing").on("click", function() {
+                    $("#contentcolumn").load("embed/cracksealing.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#accfogseal").on("click", function() {
+                    $("#contentcolumn").load("embed/fogseal.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#accmicromilling").on("click", function() {
+                    $("#contentcolumn").load("embed/micromilling.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#accmicrosurfacing").on("click", function() {
+                    $("#contentcolumn").load("embed/microsurfacing.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#accslurryseal").on("click", function() {
+                    $("#contentcolumn").load("embed/slurryseal.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#accthinoverlay").on("click", function() {
+                    $("#contentcolumn").load("embed/thinoverlay.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#accwhitetopping").on("click", function() {
+                    $("#contentcolumn").load("embed/whitetopping.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#accpothole").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#accOGI").on("click", function() {
+                    $("#contentcolumn").load("embed/OGI.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#accFDRE").on("click", function() {
+                    $("#contentcolumn").load("embed/FDRE.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#accHIR").on("click", function() {
+                    $("#contentcolumn").load("embed/HIR.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#accCIR").on("click", function() {
+                    $("#contentcolumn").load("embed/CIR.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#accultra").on("click", function() {
+                    $("#contentcolumn").load("embed/ultra.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#accthinoverlay").on("click", function() {
+                    $("#contentcolumn").load("embed/thinoverlay.html");
+                });
+            });
+
+
+    </script>
+
+
+</body>
+</html>

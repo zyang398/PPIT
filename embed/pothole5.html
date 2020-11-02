@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="w3-container" id="justanormalcolumn">
+        <br />
+        <div class="w3-center" style="height: 168px">
+            <a href="#" id="pothole">
+                <img alt="" height="161" src="images/pothole0.png" width="285" />
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            <br />
+            <br />
+        </div>
+        <div class="w3-bar w3-white ">
+            <a href="#" id="pothole1" class="w3-bar-item w3-button w3-mobile w3-white w3-border">General</a>
+            <a href="#" id="pothole2" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Project Selection</a>
+            <a href="#" id="pothole3" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Material</a>
+            <a href="#" id="pothole4" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Construction</a>
+            <a href="#" id="pothole5" class="w3-bar-item w3-button w3-mobile w3-grey w3-border">Performance</a>
+            <a href="#" id="pothole6" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Standards/References</a>
+        </div>
+        <p class = "MsoNormal">Patches may fail because of the materials used, installation
+                        issues, or simply because the roadway continues to deteriorate.The patches themselves 
+                        may fail in a number of ways, as described by Anderson et al. in 1988 and shown in Table below</p>
+
+                        <p class="auto-style1" style="layout-grid-mode: char;" align="center">
+                    <b>Failure Symptoms and Mechanisms (Anderson et al. 1988)</b><span style="font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+                     <p align="center"><img alt="" height="353" src="images/pothole4.png" width="600" class = "w3-image"/></o:p></p>
+
+                     <P class = "MsoNormal">Study also found that the proprietary cold mix materials performed significantly better than a local patching mix. And spray injection was not found to be cost-effective.</P>
+
+
+
+
+
+
+
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+
+            $(document).ready( function() {
+                $("#pothole").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole1").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole2").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole2.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole3").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole3.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole4").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole4.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole5").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole5.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole6").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole6.html");
+                });
+            });
+
+
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="w3-container" id="justanormalcolumn">
+        <br />
+        <div class="w3-center" style="height: 168px">
+            <a href="#" id="fdr">
+                <img alt="" height="161" src="images/fdr0.png" width="285" />
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            <br />
+            <br />
+        </div>
+        <div class="w3-bar w3-white ">
+            <a href="#" id="fdr1" class="w3-bar-item w3-button w3-mobile w3-white w3-border">General</a>
+            <a href="#" id="fdr2" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Project Selection</a>
+            <a href="#" id="fdr3" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Material</a>
+            <a href="#" id="fdr4" class="w3-bar-item w3-button w3-mobile w3-grey w3-border">Construction</a>
+            <a href="#" id="fdr5" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Performance</a>
+            <a href="#" id="fdr6" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Standards/References</a>
+        </div>
+
+
+        <p align="center"><img alt="" height="400" src="images/fdr1.png" width="400" class="w3-image" /></o:p></p>
+        <p class="auto-style1" style="layout-grid-mode: char;" align="center">
+            <b>CPR techniques (ACPA, 1997)</b> <span style="font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span>
+        </p>
+
+
+        <p align="center"><video width="540" height="360" controls=controls class="w3-image">
+            <source src="videos/fulldepthrepair.mp4" type="video/mp4" />
+        </video></p>
+        <p class="auto-style1" style="layout-grid-mode: char;" align="center">
+            <b>Full Depth Repair</b><span style="font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span>
+        </p>
+
+
+    </div>
+
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script>
+
+            $(document).ready( function() {
+                $("#fdr").on("click", function() {
+                    $("#contentcolumn").load("embed/fdr.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#fdr1").on("click", function() {
+                    $("#contentcolumn").load("embed/fdr.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#fdr2").on("click", function() {
+                    $("#contentcolumn").load("embed/fdr2.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#fdr3").on("click", function() {
+                    $("#contentcolumn").load("embed/fdr3.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#fdr4").on("click", function() {
+                    $("#contentcolumn").load("embed/fdr4.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#fdr5").on("click", function() {
+                    $("#contentcolumn").load("embed/fdr5.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#fdr6").on("click", function() {
+                    $("#contentcolumn").load("embed/fdr6.html");
+                });
+            });
+
+
+
+    </script>
+
+
+
+</body>
+</html>

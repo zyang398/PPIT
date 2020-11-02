@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="w3-container" id="justanormalcolumn">
+        <br />
+        <div class="w3-center" style="height: 168px">
+            <a href="#" id="ssslurry">
+                <img alt="" height="160" src="images/slurryseal0.png" width="280" />
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            <br />
+            <br />
+        </div>
+        <div class="w3-bar w3-white ">
+            <a href="#" id="ssslurry1" class="w3-bar-item w3-button w3-mobile w3-white w3-border">General</a>
+            <a href="#" id="ssslurry2" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Project Selection</a>
+            <a href="#" id="ssslurry3" class="w3-bar-item w3-button w3-mobile w3-grey w3-border">Material</a>
+            <a href="#" id="ssslurry4" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Construction</a>
+            <a href="#" id="ssslurry5" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Performance</a>
+            <a href="#" id="ssslurry6" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Standards/References</a>
+        </div>
+        <p class="MsoNormal">
+            The slurry seal mixture design should follow the
+            specifications and be approved by GDOT.<span style="mso-spacerun:yes">
+                &nbsp;
+            </span>Aggregate, asphalt emulsion and mineral filler
+            supplies must come from approved suppliers.<o:p></o:p>
+        </p>
+
+    </div>
+
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+
+            $(document).ready( function() {
+                $("#ssslurry").on("click", function() {
+                    $("#contentcolumn").load("embed/slurryseal.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#ssslurry1").on("click", function() {
+                    $("#contentcolumn").load("embed/slurryseal.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#ssslurry2").on("click", function() {
+                    $("#contentcolumn").load("embed/slurryseal2.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#ssslurry3").on("click", function() {
+                    $("#contentcolumn").load("embed/slurryseal3.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#ssslurry4").on("click", function() {
+                    $("#contentcolumn").load("embed/slurryseal4.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#ssslurry5").on("click", function() {
+                    $("#contentcolumn").load("embed/slurryseal5.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#ssslurry6").on("click", function() {
+                    $("#contentcolumn").load("embed/slurryseal6.html");
+                });
+            });
+
+    </script>
+</body>
+</html>

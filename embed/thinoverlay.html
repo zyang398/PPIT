@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="w3-container" id="justanormalcolumn">
+        <br />
+        <div class="w3-center" style="height: 168px">
+            <a href="#" id="tothinoverlay">
+                <img alt="" height="160" src="images/thinoverlay0.png" width="280" />
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            <br />
+            <br />
+        </div>
+        <div class="w3-bar w3-white ">
+            <a href="#" id="tothinoverlay1" class="w3-bar-item w3-button w3-mobile w3-grey w3-border">General</a>
+            <a href="#" id="tothinoverlay2" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Project Selection</a>
+            <a href="#" id="tothinoverlay3" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Material</a>
+            <a href="#" id="tothinoverlay4" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Construction</a>
+            <a href="#" id="tothinoverlay5" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Performance</a>
+            <a href="#" id="tothinoverlay6" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Standards/References</a>
+        </div>
+        <p class="MsoNormal">
+            Thin overlay is the placement of an
+            asphalt layer on top of existing or milled pavement surface.
+            <span style="color:black;mso-themecolor:
+text1">
+                Defined by National Asphalt Pavement Association, thin overlay is &#8220;a
+                time-proven method of extending the life of pavement
+                structures that are still in serviceable shape, which is
+                1.5inches or less in thickness, and comprised of aggregates
+                that have a small nominal maximum aggregate size, generally
+                12.5mm or less&#8221;. Thin overlay is often carried out in
+                conjunction with other corrective activities such as milling
+                and leveling.<span style="mso-spacerun:yes">&nbsp; </span>It
+                is considered as pavement preservation because thin layer
+                does not add structural capacity.<o:p></o:p>
+            </span>
+        </p>
+        <br />
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+
+            $(document).ready( function() {
+                $("#tothinoverlay").on("click", function() {
+                    $("#contentcolumn").load("embed/thinoverlay.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#tothinoverlay1").on("click", function() {
+                    $("#contentcolumn").load("embed/thinoverlay.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#tothinoverlay2").on("click", function() {
+                    $("#contentcolumn").load("embed/thinoverlay2.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#tothinoverlay3").on("click", function() {
+                    $("#contentcolumn").load("embed/thinoverlay3.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#tothinoverlay4").on("click", function() {
+                    $("#contentcolumn").load("embed/thinoverlay4.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#tothinoverlay5").on("click", function() {
+                    $("#contentcolumn").load("embed/thinoverlay5.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#tothinoverlay6").on("click", function() {
+                    $("#contentcolumn").load("embed/thinoverlay6.html");
+                });
+            });
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GDOT Pavement Preservation Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="footer.css">
+<style>
+.float-button {
+position: fixed;
+height: 30px;
+width: 110px;
+top: 1px;
+left: 240px;
+}
+</style>
+</head>
+<body>
+    <!--Sidebar-->
+    <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:350px" id="mySidebar">
+        <div class="float-button">
+        <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button> </div>   
+        <a href="index.html" class="w3-bar-item w3-button">Home</a>
+        <div class="w3-bar-item w3-button" onclick="ShowMenu('AC')"><a href="#" id="linkacc1">AC Pavement Treatments <i class="fa fa-caret-down"></i></a></div>
+		<div id="AC" class="w3-hide">
+    		<a href="#" id="linkchipseal" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;Chip Seal/Strip Seal/Scrub Seal</a>
+            <a href="#" id="linkcrackseal" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;Crack Seal</a>
+            <a href="#" id="linkfogseal" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;Fog Seal</a>
+            <a href="#" id="linkmicromilling" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;Micromilling</a>
+            <a href="#" id="linkmicrosurfacing" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;Microsurfacing/Slurry Seal</a>
+            <!-- <a href="#" id="linkslurryseal" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;Slurry Seal/Scrub seal</a> -->
+            <a href="#" id="linkthinoverlay" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;Thin Overlay<br /> &nbsp;&nbsp;&nbsp;&nbsp;- Hot-mix Overlay<br /> &nbsp;&nbsp;&nbsp;&nbsp;- Spot Overlay<br /> &nbsp;&nbsp;&nbsp;&nbsp;- Mill and Inlay<br /> &nbsp;&nbsp;&nbsp;&nbsp;- Spot Mill Overlay</a>
+            <a href="#" id="linkwhitetopping" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;White Topping</a>
+            <a href="#" id="linkpothole" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;Pothole Patching <br /> &nbsp;&nbsp;&nbsp;&nbsp;- Hot-mix Spot Patching<br /> &nbsp;&nbsp;&nbsp;&nbsp;- Cold-mix Patching<br /> &nbsp;&nbsp;&nbsp;&nbsp;- Mastic Patching<br /> &nbsp;&nbsp;&nbsp;&nbsp;- Spary Injection Patching</a>
+            <a href="#" id="linkOGI" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;OGI/SSI</a>
+            <a href="#" id="linkFDRE" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;Full Depth Reclamation</a>
+            <a href="#" id="linkHIR" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;Hot In-place Recycling</a> 
+            <a href="#" id="linkCIR" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;Cold In-place Recycling</a> 
+            <a href="#" id="linkultra" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;Ultra-Thin Bonded Wearing Course</a>
+		</div>
+        <a href="#" id="linkmatrix" class="w3-bar-item w3-button">AC Pavement Treatment Selection</a>
+
+        <div class="w3-bar-item w3-button" onclick="ShowMenu('PCC')"><a href="#" id="linkpcc1">PCC Pavement Treatments <i class="fa fa-caret-down"></i></a></div>
+        <div id="PCC" class="w3-hide">
+            <a href="#" id="linkdiamond" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;Diamond Grinding</a>
+            <a href="#" id="linkdbr" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;Dowel Bar Retrofit</a>
+            <a href="#" id="linkfdr" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;Full Depth Repair</a>
+            <a href="#" id="linkjointseal" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;Joint Sealing</a>
+            <a href="#" id="linkpdr" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;Partial Depth Repair</a>
+        </div>
+        <a href="#" id="linkpccmatrix" class="w3-bar-item w3-button">PCC Pavement Treatment Selection</a>
+    </div>
+    <!-- Page Content -->
+    <div class="main-container w3-main" style="margin-left:350px">
+        <!--Header-->
+        <header class="w3-container w3-teal w3-grey">
+            <button class="w3-button w3-teal w3-xlarge w3-hide-large w3-left-align" onclick="w3_open()">&#9776;</button>
+            <h1 class="w3-center" style="font-size:2.5vw;">
+                <img class="w3-image" alt="" height="58" src="images/GDOT_logo.png" width="283" /><br />
+                A Guide for Pavement Preservation Treatments
+            </h1>
+        </header>
+        <!--Main Page-->
+        <div id="contentcolumn">
+            <div class="w3-cell-row">
+                <div class="w3-container w3-white w3-cell w3-mobile w3-cell-middle w3-center w3-border">
+                    <br /><br />
+                    <a href="#" id="linkacc">
+                        <img alt="" height="160" src="images/Ashpalt.png" width="300" />
+                    </a><br /><br />
+                </div>
+                <div class="w3-container w3-white w3-cell w3-mobile w3-cell-middle w3-center w3-border">
+                    <br /><br />
+                    <a href="#" id="linkpcc">
+                        <img alt="" height="160" src="images/Concrete.png" width="300" />
+                    </a><br /><br />
+                </div>
+            </div>
+            <div class="w3-cell-row">
+                <div class="w3-container w3-white w3-cell w3-mobile w3-cell-middle w3-center w3-border">
+                    <br /><br />
+                    <a href="#" id="linkacc2">
+                        <img alt="" height="160" src="images/acc0.png" width="300" />
+                    </a><br /><br />
+                </div>
+                <div class="w3-container w3-white w3-cell w3-mobile w3-cell-middle w3-center w3-border">
+                    <br /><br />
+                    <a href="#" id="linkpcc2">
+                        <img alt="" height="160" src="images/cpp0.png" width="300" />
+                    </a><br /><br />
+                </div>
+            </div>
+        </div>
+        <br /><br /><br />
+        <!--Footer-->
+        <footer>
+            <div class="w3-container w3-teal w3-grey">
+                <p class="w3-grey w3-center">Developed by Georgia Institute of Technology, October 2018, Draft Version</p>
+            </div>
+        </footer>
+    </div>
+
+    <!--Scripts-->
+    <script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+        function myFunction(id) {
+    		var x = document.getElementById(id);
+    		if (x.className.indexOf("w3-show") == -1) {
+        	x.className += " w3-show";
+   		 	} else { 
+        	x.className = x.className.replace(" w3-show", "");
+    		}
+        }
+        function ShowMenu(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-grey";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                x.previousElementSibling.className.replace(" w3-grey", "");
+            }
+        }
+    </script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script>
+
+        $(document).ready( function() {
+            $("#linkchipseal").on("click", function() {
+                $("#contentcolumn").load("embed/chipseal.html");
+                });
+            });
+        $(document).ready(function () {
+            $("#linkcrackseal").on("click", function () {
+                $("#contentcolumn").load("embed/cracksealing.html");
+                });
+            });
+        $(document).ready(function () {
+            $("#linkfogseal").on("click", function () {
+                $("#contentcolumn").load("embed/fogseal.html");
+                });
+            });
+
+        $(document).ready(function () {
+            $("#linkmicromilling").on("click", function () {
+                $("#contentcolumn").load("embed/micromilling.html");
+                });
+            });
+
+        $(document).ready(function () {
+            $("#linkFDRE").on("click", function () {
+                $("#contentcolumn").load("embed/FDRE.html");
+                });
+            });
+
+        $(document).ready(function () {
+            $("#linkwhitetopping").on("click", function () {
+                $("#contentcolumn").load("embed/whitetopping.html");
+                });
+            });
+
+        $(document).ready(function () {
+            $("#linkOGI").on("click", function () {
+                $("#contentcolumn").load("embed/OGI.html");
+                });
+            });
+        $(document).ready(function () {
+            $("#linkHIR").on("click", function () {
+                $("#contentcolumn").load("embed/HIR.html");
+                });
+            });
+        $(document).ready(function () {
+            $("#linkCIR").on("click", function () {
+                $("#contentcolumn").load("embed/CIR.html");
+                });
+            });
+        $(document).ready(function () {
+            $("#linkultra").on("click", function () {
+                $("#contentcolumn").load("embed/ultra.html");
+                });
+            });
+
+        $(document).ready(function () {
+            $("#linkpothole").on("click", function () {
+                $("#contentcolumn").load("embed/pothole.html");
+                });
+            });
+
+        $(document).ready(function () {
+            $("#linkmicrosurfacing").on("click", function () {
+                $("#contentcolumn").load("embed/microsurfacing.html");
+                });
+            });
+
+        $(document).ready(function () {
+            $("#linkslurryseal").on("click", function () {
+                $("#contentcolumn").load("embed/slurryseal.html");
+                });
+            });
+
+        $(document).ready(function () {
+            $("#linkthinoverlay").on("click", function () {
+                $("#contentcolumn").load("embed/thinoverlay.html");
+                });
+            });
+
+        $(document).ready(function () {
+            $("#linkmatrix").on("click", function () {
+                $("#contentcolumn").load("embed/matrix_embedded.html");
+                });
+            });
+        $(document).ready(function () {
+            $("#linkacc1").on("click", function () {
+                $("#contentcolumn").load("embed/ACC.html");
+                });
+            });
+        $(document).ready(function () {
+            $("#linkacc").on("click", function () {
+                $("#contentcolumn").load("embed/ACC.html");
+            });
+        });
+
+        $(document).ready(function () {
+            $("#linkacc2").on("click", function () {
+                $("#contentcolumn").load("embed/matrix_embedded.html");
+                });
+            });
+
+        $(document).ready(function () {
+            $("#linkdiamond").on("click", function () {
+                $("#contentcolumn").load("embed/diamondgrinding.html");
+                });
+            });
+
+        $(document).ready(function () {
+            $("#linkdbr").on("click", function () {
+                $("#contentcolumn").load("embed/dbr.html");
+                });
+            });
+
+        $(document).ready(function () {
+            $("#linkjointseal").on("click", function () {
+                $("#contentcolumn").load("embed/jointsealing.html");
+                });
+            });
+
+        $(document).ready(function () {
+            $("#linkfdr").on("click", function () {
+                $("#contentcolumn").load("embed/fdr.html");
+                });
+            });
+
+        $(document).ready(function () {
+            $("#linkpdr").on("click", function () {
+                $("#contentcolumn").load("embed/pdr.html");
+                });
+            });
+        $(document).ready(function () {
+            $("#linkpccmatrix").on("click", function () {
+                $("#contentcolumn").load("embed/pccmatrix_embed.html");
+                });
+        });
+        $(document).ready(function () {
+            $("#linkpcc").on("click", function () {
+                $("#contentcolumn").load("embed/PCC.html");
+            });
+        });
+
+        $(document).ready(function () {
+            $("#linkpcc1").on("click", function () {
+                $("#contentcolumn").load("embed/PCC.html");
+                });
+            });
+
+        $(document).ready(function () {
+            $("#linkpcc2").on("click", function () {
+                $("#contentcolumn").load("embed/pccmatrix_embed.html");
+                });
+            });
+
+    </script>
+
+</body>
+</html> 

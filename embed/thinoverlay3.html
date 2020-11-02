@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="w3-container" id="justanormalcolumn">
+        <br />
+        <div class="w3-center" style="height: 168px">
+            <a href="#" id="tothinoverlay">
+                <img alt="" height="160" src="images/thinoverlay0.png" width="280" />
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            <br />
+            <br />
+        </div>
+        <div class="w3-bar w3-white ">
+            <a href="#" id="tothinoverlay1" class="w3-bar-item w3-button w3-mobile w3-white w3-border">General</a>
+            <a href="#" id="tothinoverlay2" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Project Selection</a>
+            <a href="#" id="tothinoverlay3" class="w3-bar-item w3-button w3-mobile w3-grey w3-border">Material</a>
+            <a href="#" id="tothinoverlay4" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Construction</a>
+            <a href="#" id="tothinoverlay5" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Performance</a>
+            <a href="#" id="tothinoverlay6" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Standards/References</a>
+        </div>
+
+        <p class="MsoNormal">
+            <span lang="EN" style="font-size: 12.0pt; line-height: 150%; mso-fareast-font-family: SimSun; mso-fareast-theme-font: minor-fareast; mso-bidi-font-family: Arial; mso-ansi-language: EN; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">
+                The types of HMA applied can be dense graded, open graded,
+                stone matrix mixes, with or without high percentage of
+                polymer-modified binder. This section focuses on dense
+                graded layer and do not address other mix types, such as 
+                open-graded mixes. These materials and their construction
+                requirements are described in Sections 400, 424, 824, and
+                828 of the Standard Specifications, 2013 Edition, in Special
+                Provisions 400 and 828 issued Feb. 24, 2006, and in Special
+                Provisions 424 and 824 issued Mar. 6, 2006.
+            </span>
+            <span lang="EN" style="font-size: 12.0pt; line-height: 150%; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: Arial; mso-ansi-language: EN; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">
+                According to GDOT&#8217;s Asphalt Pavement Selection Guidelines,
+                mix types are distinguished according to nominal maximum
+                size of the aggregate in millimeters, i.e. 9.5 relates to an
+                aggregate size of 9.5 millimeters, or 3/8 inch. Selection
+                guidelines for asphalt pavement presented in two categories,
+                Low to Medium Volume and Medium to High Volume:
+            </span>
+        </p>
+        <p align="center">
+            <img class="w3-image" alt="" height="246" src="images/thinoverlaytable1.png" width="713" />
+        </p>
+        <br />
+    </div>
+
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+
+            $(document).ready( function() {
+                $("#tothinoverlay").on("click", function() {
+                    $("#contentcolumn").load("embed/thinoverlay.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#tothinoverlay1").on("click", function() {
+                    $("#contentcolumn").load("embed/thinoverlay.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#tothinoverlay2").on("click", function() {
+                    $("#contentcolumn").load("embed/thinoverlay2.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#tothinoverlay3").on("click", function() {
+                    $("#contentcolumn").load("embed/thinoverlay3.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#tothinoverlay4").on("click", function() {
+                    $("#contentcolumn").load("embed/thinoverlay4.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#tothinoverlay5").on("click", function() {
+                    $("#contentcolumn").load("embed/thinoverlay5.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#tothinoverlay6").on("click", function() {
+                    $("#contentcolumn").load("embed/thinoverlay6.html");
+                });
+            });
+
+    </script>
+</body>
+</html>

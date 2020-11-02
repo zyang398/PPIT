@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="w3-container" id="justanormalcolumn">
+        <br />
+        <div class="w3-center" style="height: 168px">
+            <a href="#" id="dbr">
+                <img alt="" height="161" src="images/dbr0.png" width="285" />
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            <br />
+            <br />
+        </div>
+        <div class="w3-bar w3-white ">
+            <a href="#" id="dbr1" class="w3-bar-item w3-button w3-mobile w3-white w3-border">General</a>
+            <a href="#" id="dbr2" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Project Selection</a>
+            <a href="#" id="dbr3" class="w3-bar-item w3-button w3-mobile w3-grey w3-border">Material</a>
+            <a href="#" id="dbr4" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Construction</a>
+            <a href="#" id="dbr5" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Performance</a>
+            <a href="#" id="dbr6" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Standards/References</a>
+        </div>
+        <p class="MsoNormal">Once the dowels are placed, backfill materials are applied. Backfill materials should have similar thermal properties to the concrete, provide strong bond to the existing concrete, be fast setting, have little shrinkage, and develop enough strength to allow traffic in a short time. Both high early strength concrete and proprietary mixes have been used successfully. High early strength concrete usually contains type III cement, accelerators, and aluminum power. Accelerators and aluminum powder improve set times and reduce shrinkage. Aggregates in the mix should be small enough to allow the concrete to flow around the bar and consolidate properly.</p>
+
+
+
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script>
+
+            $(document).ready( function() {
+                $("#dbr").on("click", function() {
+                    $("#contentcolumn").load("embed/dbr.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#dbr1").on("click", function() {
+                    $("#contentcolumn").load("embed/dbr.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#dbr2").on("click", function() {
+                    $("#contentcolumn").load("embed/dbr2.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#dbr3").on("click", function() {
+                    $("#contentcolumn").load("embed/dbr3.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#dbr4").on("click", function() {
+                    $("#contentcolumn").load("embed/dbr4.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#dbr5").on("click", function() {
+                    $("#contentcolumn").load("embed/dbr5.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#dbr6").on("click", function() {
+                    $("#contentcolumn").load("embed/dbr6.html");
+                });
+            });
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

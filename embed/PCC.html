@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="w3-cell-row">
+        <div class="w3-container w3-white w3-cell w3-mobile w3-cell-middle w3-center">
+            <a href="#" id="pccdiamond">
+                <img class="w3-padding" alt="" height="130" src="images/diamondgrinding0.png" width="180" />
+            </a>
+        </div>
+        <div class="w3-container w3-white w3-cell w3-mobile w3-cell-middle w3-center">
+            <a href="#" id="pccdbr">
+                <img class="w3-padding" alt="" height="130" src="images/dbr0.png" width="180"/>
+            </a>
+        </div>
+        <div class="w3-container w3-white w3-cell w3-mobile w3-cell-middle w3-center">
+            <a href="#" id="pccfdr">
+                <img class="w3-padding" alt="" height="130" src="images/fdr0.png" width="180" />
+            </a>
+        </div>
+    </div>
+    <div class="w3-cell-row">
+        <div class="w3-container w3-white w3-cell w3-mobile w3-cell-middle w3-center">
+            <a href="#" id="pccjointseal">
+                <img class="w3-padding" alt="" height="130" src="images/jointsealing0.png" width="180" />
+            </a>
+        </div>
+        <div class="w3-container w3-white w3-cell w3-mobile w3-cell-middle w3-center">
+            <a href="#" id="pccpdr">
+                <img class="w3-padding" alt="" height="130" src="images/pdr0.png" width="180" />
+            </a>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+
+
+
+            $(document).ready( function() {
+                $("#pccdiamond").on("click", function() {
+                    $("#contentcolumn").load("embed/diamondgrinding.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pccdbr").on("click", function() {
+                    $("#contentcolumn").load("embed/dbr.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pccjointseal").on("click", function() {
+                    $("#contentcolumn").load("embed/jointsealing.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pccfdr").on("click", function() {
+                    $("#contentcolumn").load("embed/fdr.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pccpdr").on("click", function() {
+                    $("#contentcolumn").load("embed/pdr.html");
+                });
+            });
+    </script>
+
+</body>
+</html>

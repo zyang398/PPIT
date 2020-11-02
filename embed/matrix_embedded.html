@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript">
+            //calculator function !!!!!
+            //  End -->
+            //Use function to calculator the recommendation answer, including jquery selection
+            //!!!!!!!!didn't change all the methond to the correct image and link since most of the methond introduction are not finished!!!!!!!!!!!!!!!!!!!!!
+            function display(action, id1) {
+                console.log("display_print")
+                console.log(action)
+                if (action == 'show1') {
+                    document.getElementById("recommend").style.display = "";
+                    document.getElementById("selectedTreat").innerHTML = "";
+                    document.getElementById("selectedTreat").style.display = "";
+                    a0 = document.createElement('a');
+                    a0.id = "treatments"
+                    a0.setAttribute('class', "");
+                    a0.setAttribute('align', "center");
+                    document.getElementById("selectedTreat").appendChild(a0)
+                    //      var element = document.getElementById("selectedMat");
+                    //      var element = document.createElement('div');
+                    //      document.getElementsByTagName('body')[0].appendChild(element);
+                    /*  <img alt="" id="mat2-2" style="display: none;" height="100" src="images/thermo0.png" width="100" /></a>
+                     */
+                    for (var i = 0; i < id1.length; i++) {
+                        if (id1[i] == 0) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixfogseal"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/fogseal0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                           $(document).ready( function() {
+                                $("#matrixfogseal").on("click", function() {
+                                    $("#contentcolumn").load("embed/fogseal.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 1) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixcrackseal"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/cracksealing0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixcrackseal").on("click", function() {
+                                    $("#contentcolumn").load("embed/cracksealing.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 2) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixscrubseal"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/scrubseal0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixscrubseal").on("click", function() {
+                                    $("#contentcolumn").load("embed/chipseal.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 3) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixchipseal"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/chipseal0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixchipseal").on("click", function() {
+                                    $("#contentcolumn").load("embed/chipseal.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 4) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixSSI"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/SSI0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixSSI").on("click", function() {
+                                    $("#contentcolumn").load("embed/OGI.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 5) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixOGI"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/OGI0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixOGI").on("click", function() {
+                                    $("#contentcolumn").load("embed/OGI.html");
+                                });
+                            });
+                        }
+
+                        if (id1[i] == 6) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixstripseal"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/stripseal0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixstripseal").on("click", function() {
+                                    $("#contentcolumn").load("embed/chipseal.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 7) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixslurry"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/slurryseal0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixslurry").on("click", function() {
+                                    $("#contentcolumn").load("embed/microsurfacing.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 8) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixmicrosurfacing"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/microsurfacing0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixmicrosurfacing").on("click", function() {
+                                    $("#contentcolumn").load("embed/microsurfacing.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 9) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixultra"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/ultra0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixultra").on("click", function() {
+                                    $("#contentcolumn").load("embed/ultra.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 10) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixfdre"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/FDRE0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixfdre").on("click", function() {
+                                    $("#contentcolumn").load("embed/FDRE.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 11) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixhir"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/HIR0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixhir").on("click", function() {
+                                    $("#contentcolumn").load("embed/HIR.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 12) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixcir"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/CIR0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixcir").on("click", function() {
+                                    $("#contentcolumn").load("embed/CIR.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 13) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixmillandinlay"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/millinlay0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixmillandinlay").on("click", function() {
+                                    $("#contentcolumn").load("embed/thinoverlay.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 14) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixhotmixoverlay"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/hotmixoverlay0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixhotmixoverlay").on("click", function() {
+                                    $("#contentcolumn").load("embed/thinoverlay.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 15) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixthinoverlay"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/thinoverlay0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixthinoverlay").on("click", function() {
+                                    $("#contentcolumn").load("embed/thinoverlay.html");
+                                });
+                            });
+                        }
+                        //    if (id1[i] == 16) {
+                        //     a1 = document.createElement('a');
+                        //     a1.id = "matrixthinoverlay"
+                        //     a1.setAttribute('href', "#");
+                        //     a2 = document.createElement('img');
+                        //     a2.id = "img2"
+                        //     a2.setAttribute('height', "100");
+                        //     a2.setAttribute('width', "100");
+                        //     a2.setAttribute('src', "images/thinoverlay0.png");
+                        //     a1.appendChild(a2)
+                        //     document.getElementById("selectedTreat").appendChild(a1)
+                        //     $(document).ready( function() {
+                        //         $("#matrixthinoverlay").on("click", function() {
+                        //             $("#contentcolumn").load("embed/thinoverlay.html");
+                        //         });
+                        //     });
+                        // }
+                        if (id1[i] == 18) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixspray"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/spray0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixspray").on("click", function() {
+                                    $("#contentcolumn").load("embed/pothole.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 19) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixspotoverlay"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/spotoverlay0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixspotoverlay").on("click", function() {
+                                    $("#contentcolumn").load("embed/thinoverlay.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 20) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixspotmilloverlay"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/spotmilloverlay0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixspotmilloverlay").on("click", function() {
+                                    $("#contentcolumn").load("embed/thinoverlay.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 21) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixwhitetopping"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/whitetopping0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixwhitetopping").on("click", function() {
+                                    $("#contentcolumn").load("embed/whitetopping.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 24) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixmicromilling"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/micromilling0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixmicromilling").on("click", function() {
+                                    $("#contentcolumn").load("embed/micromilling.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 25) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixmastic"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/mastic0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixmastic").on("click", function() {
+                                    $("#contentcolumn").load("embed/pothole.html");
+                                });
+                            });
+                        }
+
+
+                        document.getElementById("selectedTreat").appendChild(document.createTextNode("   "));
+                    }
+                }
+                if (action == 'show2') {
+                    document.getElementById("optional").style.display = "";
+                    document.getElementById("selectedTreat2").innerHTML = "";
+                    document.getElementById("selectedTreat2").style.display = "";
+                    a0 = document.createElement('a');
+                    a0.id = "treatments"
+                    a0.setAttribute('class', "");
+                    a0.setAttribute('align', "center");
+                    document.getElementById("selectedTreat2").appendChild(a0)
+                    //      var element = document.getElementById("selectedMat");
+                    //      var element = document.createElement('div');
+                    //      document.getElementsByTagName('body')[0].appendChild(element);
+                    /*  <img alt="" id="mat2-2" style="display: none;" height="100" src="images/thermo0.png" width="100" /></a>
+                     */
+                    for (var i = 0; i < id1.length; i++) {
+                        if (id1[i] == 0) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixfogseal"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/fogseal0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                           $(document).ready( function() {
+                                $("#matrixfogseal").on("click", function() {
+                                    $("#contentcolumn").load("embed/fogseal.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 1) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixcrackseal"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/cracksealing0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixcrackseal").on("click", function() {
+                                    $("#contentcolumn").load("embed/cracksealing.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 2) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixscrubseal"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/scrubseal0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixscrubseal").on("click", function() {
+                                    $("#contentcolumn").load("embed/chipseal.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 3) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixchipseal"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/chipseal0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixchipseal").on("click", function() {
+                                    $("#contentcolumn").load("embed/chipseal.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 4) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixSSI"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/SSI0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixSSI").on("click", function() {
+                                    $("#contentcolumn").load("embed/OGI.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 5) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixOGI"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/OGI0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixOGI").on("click", function() {
+                                    $("#contentcolumn").load("embed/OGI.html");
+                                });
+                            });
+                        }
+
+                        if (id1[i] == 6) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixstripseal"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/stripseal0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixstripseal").on("click", function() {
+                                    $("#contentcolumn").load("embed/chipseal.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 7) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixslurry"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/slurryseal0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixslurry").on("click", function() {
+                                    $("#contentcolumn").load("embed/microsurfacing.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 8) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixmicrosurfacing"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/microsurfacing0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixmicrosurfacing").on("click", function() {
+                                    $("#contentcolumn").load("embed/microsurfacing.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 9) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixultra"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/ultra0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixultra").on("click", function() {
+                                    $("#contentcolumn").load("embed/ultra.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 10) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixfdre"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/FDRE0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixfdre").on("click", function() {
+                                    $("#contentcolumn").load("embed/FDRE.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 11) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixhir"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/HIR0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixhir").on("click", function() {
+                                    $("#contentcolumn").load("embed/HIR.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 12) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixcir"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/CIR0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixcir").on("click", function() {
+                                    $("#contentcolumn").load("embed/CIR.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 13) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixmillandinlay"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/millinlay0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixmillandinlay").on("click", function() {
+                                    $("#contentcolumn").load("embed/thinoverlay.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 14) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixhotmixoverlay"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/hotmixoverlay0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixhotmixoverlay").on("click", function() {
+                                    $("#contentcolumn").load("embed/thinoverlay.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 15) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixthinoverlay"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/thinoverlay0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixthinoverlay").on("click", function() {
+                                    $("#contentcolumn").load("embed/thinoverlay.html");
+                                });
+                            });
+                        }
+                        //    if (id1[i] == 16) {
+                        //     a1 = document.createElement('a');
+                        //     a1.id = "matrixthinoverlay"
+                        //     a1.setAttribute('href', "#");
+                        //     a2 = document.createElement('img');
+                        //     a2.id = "img2"
+                        //     a2.setAttribute('height', "100");
+                        //     a2.setAttribute('width', "100");
+                        //     a2.setAttribute('src', "images/thinoverlay0.png");
+                        //     a1.appendChild(a2)
+                        //     document.getElementById("selectedTreat").appendChild(a1)
+                        //     $(document).ready( function() {
+                        //         $("#matrixthinoverlay").on("click", function() {
+                        //             $("#contentcolumn").load("embed/thinoverlay.html");
+                        //         });
+                        //     });
+                        // }
+                        if (id1[i] == 18) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixspray"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/spray0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixspray").on("click", function() {
+                                    $("#contentcolumn").load("embed/pothole.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 19) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixspotoverlay"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/spotoverlay0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixspotoverlay").on("click", function() {
+                                    $("#contentcolumn").load("embed/thinoverlay.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 20) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixspotmilloverlay"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/spotmilloverlay0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixspotmilloverlay").on("click", function() {
+                                    $("#contentcolumn").load("embed/thinoverlay.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 21) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixwhitetopping"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/whitetopping0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixwhitetopping").on("click", function() {
+                                    $("#contentcolumn").load("embed/whitetopping.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 24) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixmicromilling"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/micromilling0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixmicromilling").on("click", function() {
+                                    $("#contentcolumn").load("embed/micromilling.html");
+                                });
+                            });
+                        }
+                        if (id1[i] == 25) {
+                            a1 = document.createElement('a');
+                            a1.id = "matrixmastic"
+                            a1.setAttribute('href', "#");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/mastic0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat2").appendChild(a1)
+                            $(document).ready( function() {
+                                $("#matrixmastic").on("click", function() {
+                                    $("#contentcolumn").load("embed/pothole.html");
+                                });
+                            });
+                        }
+
+
+                        document.getElementById("selectedTreat2").appendChild(document.createTextNode("   "));
+                    }
+                }
+            }
+</script>
+<script type="text/javascript">
+            //Create a matrix with zeros
+            function Mzeros(dimensions) {
+                var array = [];
+
+                for (var i = 0; i < dimensions[0]; ++i) {
+                    array.push(dimensions.length == 1 ? 0 : Mzeros(dimensions.slice(1)));
+                    console.log("hello");
+                }
+
+                return array;
+            }
+</script>
+<script type="text/javascript">
+            //Show GDOT treatments
+            function showTreatment(T, count) {
+                var tlist = []; //treatment list
+                tlist[0] = "Fog Seal";
+                tlist[1] = "Crack Seal";
+                tlist[2] = "Scrub Seal";
+                tlist[3] = "Std. Chip Seal";
+                tlist[4] = "SSI";
+                tlist[5] = "OGI";
+                tlist[6] = "Strip Seal";
+                tlist[7] = "Slurry Seal";
+                tlist[8] = "Micro Surfacing";
+                tlist[9] = "Ultrathin Bonded Weathering Course";
+                tlist[10] = "FDR";
+                tlist[11] = "HIR";
+                tlist[12] = "CIR";
+                tlist[13] = "Mill and Inlay";
+                tlist[14] = "Hot Mix Overlay";
+                tlist[15] = "Thin Hot Mix Overlay";
+                // tlist[16] = "Deep Base Repair";
+                // tlist[17] = "Shoulder Widening";
+                tlist[18] = "Spray Injection Patching";
+                tlist[19] = "Spot overlay";
+                tlist[20] = "Spot Mill Overlay";
+                tlist[21] = "White Topping";
+                // tlist[22] = "Conventional Milling";
+                // tlist[23] = "Roto Milling";
+                tlist[24] = "Micro Milling";
+                tlist[25] = "Mastic Patching";
+                // tlist[26] = "Soil Stabilization";
+                var Alist = []; //Final list
+                var Blist = [];
+                for (var j = 0; j < T.length; j++) {
+                    if (T[j] === 1) {
+                        Alist.push(j);
+                    }
+                    if (T[j] > 1) {
+                        Blist.push(j);
+                    }
+                }
+                
+                console.log("Alist")
+                console.log(Alist)
+                console.log("Blist")
+                console.log(Blist)
+
+                document.getElementById("recommend").style.display = "block";
+                document.getElementById("selectedTreat").innerHTML = "";
+                document.getElementById("selectedTreat").style.display = "block";
+
+                //a1 = document.createElement('a');
+                // a1.id = "link2"
+                // a1.setAttribute('href', "acc/cracksealing.html");
+                // a1.setAttribute('target', "_blank");
+                // a2 = document.createElement('img');
+                //  a2.id = "img2"
+                //  a2.setAttribute('height', "100");
+                //  a2.setAttribute('width', "100");
+                //  a2.setAttribute('src', "images/cracksealing0.png");
+                // a1.appendChild(a2)
+                // document.getElementById("selectedTreat").appendChild(a1)
+
+                if (Alist.length > 0 && Blist.length > 0) {
+                    //document.getElementById("selectedTreat").appendChild(document.createTextNode(Alist));
+                    display("show1", Alist);
+                    display("show2", Blist);
+                    }
+                else if (Alist.length > 0 && Blist.length === 0) {
+                    display("show1", Alist);
+                    document.getElementById("optional").style.display = "";
+                    document.getElementById("selectedTreat2").innerHTML = "";
+                    document.getElementById("selectedTreat2").style.display = "";
+                    document.getElementById("selectedTreat2").appendChild(document.createTextNode("No common recommendation"));
+                }
+                
+                else if (Blist.length > 0 && Alist.length === 0) {
+                    display("show2", Blist);
+                    document.getElementById("recommend").style.display = "";
+                    document.getElementById("selectedTreat").innerHTML = "";
+                    document.getElementById("selectedTreat").style.display = "";
+                    document.getElementById("selectedTreat").appendChild(document.createTextNode("No common recommendation"));
+                }
+                else {
+                    document.getElementById("recommend").style.display = "";
+                    document.getElementById("selectedTreat").innerHTML = "";
+                    document.getElementById("selectedTreat").style.display = "";
+                    document.getElementById("optional").style.display = "";
+                    document.getElementById("selectedTreat2").innerHTML = "";
+                    document.getElementById("selectedTreat2").style.display = "";
+                    document.getElementById("selectedTreat").appendChild(document.createTextNode("No common recommendation"));
+                    document.getElementById("selectedTreat2").appendChild(document.createTextNode("No common recommendation"));
+                }
+            }
+</script>
+<script type="text/javascript">
+            function selectTreatment() {
+                //Check this and show/hide hyperlinks dynamically - <a href="http://www.ghacks.net/2009/01/15/using-javascript-to-hide-and-unhide-elements-dynamically/http://www.ghacks.net/2009/01/15/using-javascript-to-hide-and-unhide-elements-dynamically/"></a>
+                // get the form variables!!
+                var Rut1 = document.getElementById("Rut1").checked;
+                var Rav1 = document.getElementById("Rav1").checked;
+                var Rav2 = document.getElementById("Rav2").checked;
+                var Rav3 = document.getElementById("Rav3").checked;
+                var LC1 = document.getElementById("LC1").checked;
+                var LC2 = document.getElementById("LC2").checked;
+                var LC3 = document.getElementById("LC3").checked;
+                //var LC4 = document.getElementById("LC4").checked;
+                var BC1 = document.getElementById("BC1").checked;
+                var BC2 = document.getElementById("BC2").checked;
+                var BC3 = document.getElementById("BC3").checked;
+                var RC1 = document.getElementById("RC1").checked;
+                var RC2 = document.getElementById("RC2").checked;
+                var RC3 = document.getElementById("RC3").checked;
+                var ED1 = document.getElementById("ED1").checked;
+                var BF1 = document.getElementById("BF1").checked;
+                var BF2 = document.getElementById("BF2").checked;
+                var BF3 = document.getElementById("BF3").checked;
+                var CP1 = document.getElementById("CP1").checked;
+                var CP2 = document.getElementById("CP2").checked;
+                var CP3 = document.getElementById("CP3").checked;
+                var LS1 = document.getElementById("LS1").checked;
+                var LS2 = document.getElementById("LS2").checked;
+                var LS3 = document.getElementById("LS3").checked;
+                var ED1 = document.getElementById("ED1").checked;
+                var ED2 = document.getElementById("ED2").checked;
+                var ED3 = document.getElementById("ED3").checked;
+                // var Aged = document.getElementById("Aged").checked;
+                // var Polish = document.getElementById("Polish").checked;
+                // var PF = document.getElementById("PF").checked;
+                // var PR = document.getElementById("PR").checked;
+                var Pot1 = document.getElementById("Pot1").checked;
+                var AADT1 = document.getElementById("AADT1").checked;
+                var AADT2 = document.getElementById("AADT2").checked;
+                var AADT3 = document.getElementById("AADT3").checked;
+                var show = []; //An array that holds all recommended methods by pushing methods into this array dynamically
+
+                //Create a matrix with zeros
+                var iMax = 30;
+                var jMax = 27;
+                var D = new Array();
+
+                for (i = 0; i < iMax; i++) {
+                    D[i] = new Array();
+                    for (j = 0; j < jMax; j++) {
+                        if (i === 0 || i === 1 || i === 2)
+                            D[i][j] = 1;
+                        else
+                            D[i][j] = 0;
+                    }
+                }
+                //Decision matrix hard coded
+                D[3][19] = D[3][20] = D[3][21] = D[3][22] = 1;
+                D[4][1] = D[4][2] = D[4][3] = D[4][4] = D[4][5] = D[4][6] = D[4][7] = D[4][8] =D[4][9] = 1;
+                D[5][1] = D[5][2] = D[5][4] = 1;
+                D[6][10] = D[6][12] = D[6][13] = D[6][16] = 1;
+
+                D[8][1] = D[8][2] = D[8][3] = D[8][4] = D[8][5] = D[8][6] = 1;
+                D[9][1] = D[9][9] = 1;
+                D[10][10] = D[10][11] = D[10][12] = D[10][22] = D[10][25] = 1;
+                D[11][4] = D[11][11] = D[11][12] = 1;
+                D[12][1] = D[12][3] = D[12][11] = D[12][12] = 1;
+                D[13][2] = D[13][10] = D[13][11] = D[13][12] = 1;
+                D[14][7] = D[14][8] = D[14][11] = D[14][13] = D[14][19] = 1;
+                D[15][7] = D[15][8] = D[15][11] = D[15][13] = D[15][19] = 1;
+                D[16][7] = D[16][8] = D[16][11] = D[16][12] = D[16][13] = D[16][19] = 1;
+                D[17][0] = D[17][11] = 1;
+                D[18][8] = D[18][11] = D[18][13] = D[18][19] = D[18][24] = 1;
+                D[19][11] = D[19][12] = D[19][13] = D[19][19] = D[19][24] = 1;
+                D[20][1] = D[20][11] = D[20][17] = 1;
+                D[21][11] = D[21][13] = D[21][16] = D[21][17] = 1;
+                D[22][11] = D[22][13] = D[22][16] = D[22][17] = 1;
+                D[23][1] = D[23][11] = D[23][13] = D[23][14] = D[23][22] = 1;
+                D[24][11] = D[24][13] = D[24][14] = D[24][22] = 1;
+                D[25][11] = D[25][13] = D[25][14] = D[25][22] = 1;
+                D[26][1] = D[26][14] = 1;
+                D[27][1] = D[27][10] = D[27][12] = D[27][14] = 1;
+                D[28][10] = D[28][12] = D[28][13] = D[28][26] = 1;
+                D[29][10] = D[29][12] = D[29][16] = D[29][18] = D[29][19] = D[29][25] = 1;
+
+
+
+                //Decision matrix hard coded for optional treatment
+                D[3][7] = D[3][8] = D[3][9] = D[3][11] = D[3][12] = D[3][13] = D[3][14] = D[3][15] = 2;
+                D[4][0] = D[4][13] = D[4][14] = 2;
+                D[5][3] = D[5][6] = D[5][7] = D[5][8] = D[5][9] = D[5][12] = D[5][13] = D[5][16] = 2;
+                
+
+                D[8][7] = D[8][8] = D[8][11] = 2;
+                D[9][2] = D[9][3] = D[9][4] = D[9][5] = D[9][7] = D[9][8] = D[9][11] = D[9][12] = 2;
+                
+                D[11][1] = 2;
+                D[12][2] = D[12][4] = 2;
+                D[13][3] = 2;
+                D[14][14] = D[14][15] = D[14][18] = D[14][20] = 2;
+                D[15][14] = D[15][15] = D[15][18] = D[15][20] = 2;
+                D[16][14] = D[16][15] = D[16][18] = D[16][20] = 2;
+                D[17][1] = D[17][7] = D[17][8] = 2;
+                D[18][1] = D[18][7] = D[18][14] = D[18][15] = D[18][18] = D[18][20] = 2;
+                D[19][14] = D[19][15] = D[19][18] = D[19][20] = 2;
+                
+                D[21][14] = D[21][15] = 2;
+                D[22][14] = D[22][15] = 2;
+                D[23][15] = 2;
+                D[24][15] = 2;
+                D[25][15] = 2;
+                D[26][10] = D[26][12] = D[26][13] = D[26][15] = 2;
+                D[27][13] = D[27][15] = 2;
+                D[28][14] = D[28][15] = 2;
+                D[29][20] = 2;
+
+                if (AADT1 == true) { show.push(D[0]); }
+                if (AADT2 == true) { show.push(D[1]); }
+                if (AADT3 == true) { show.push(D[2]); }
+                if (Rut1 == true) { show.push(D[3]); }
+                if (LC1 == true) { show.push(D[4]); }
+                if (LC2 == true) { show.push(D[5]); }
+                if (LC3 == true) { show.push(D[6]); }
+                //if (LC4 == true) { show.push(D[7]); }
+                if (RC1 == true) { show.push(D[8]); }
+                if (RC2 == true) { show.push(D[9]); }
+                if (RC3 == true) { show.push(D[10]); }
+                if (BC1 == true) { show.push(D[11]); }
+                if (BC2 == true) { show.push(D[12]); }
+                if (BC3 == true) { show.push(D[13]); }
+                if (BF1 == true) { show.push(D[14]); }
+                if (BF2 == true) { show.push(D[15]); }
+                if (BF3 == true) { show.push(D[16]); }
+                if (Rav1 == true) { show.push(D[17]); }
+                if (Rav2 == true) { show.push(D[18]); }
+                if (Rav3 == true) { show.push(D[19]); }
+                if (ED1 == true) { show.push(D[20]); }
+                if (ED2 == true) { show.push(D[21]); }
+                if (ED3 == true) { show.push(D[22]); }
+                if (CP1 == true) { show.push(D[23]); }
+                if (CP2 == true) { show.push(D[24]); }
+                if (CP3 == true) { show.push(D[25]); }
+                if (LS1 == true) { show.push(D[26]); }
+                if (LS2 == true) { show.push(D[27]); }
+                if (LS3 == true) { show.push(D[28]); }
+                if (Pot1 == true) { show.push(D[29]); }
+
+                //console.log(show);
+
+                if (show.length > 0) {
+                    //display('display', show);
+                    //add all the ones in each column to compare for common treatments
+                    var treatments = [];
+                    
+                    for (var j = 0; j < jMax; j++) {
+                        var common = 1;
+                        for (var i = 0; i < show.length; i++) {
+                            common = common * show[i][j];
+                        }
+                        treatments[j] = common;
+
+                    }
+                    
+                    console.log("treatmetns_print")
+                    console.log(treatments)
+
+                    showTreatment(treatments, show.length);
+                    //display("show", Alist)
+                }
+                if (show.length === 0) {
+                    alert("NO DISTRESS SELECTED!");
+                }
+            }
+</script>
+<script type="text/javascript">
+            function reset() {
+                window.location.reload();
+                var w = document.getElementByTagName('input');
+                for (var j = 0; j < w.length; j++) {
+                    if (w[j].type == 'checkbox') {
+                        w[j].checked = false;
+                    }
+                }
+            }
+</script>
+<script type="text/javascript">
+    function demo(){
+        document.getElementById('demo').style.display='block'
+        document.getElementById('demo1').style.display = "none"
+
+    }
+    function demo1(){
+        document.getElementById('demo1').style.display='block'
+        document.getElementById('demo').style.display = "none"
+        
+    }
+    function demo2(){
+        
+        document.getElementById('selectedTreat').style.display = "none"
+        document.getElementById('recommend').style.display = "none"
+
+    }
+</script>
+<style type="text/css">
+    .auto-style3 {
+        text-align: left;
+    }
+
+    .auto-style4 {
+        font-size: x-large;
+    }
+</style>
+    </head>
+
+<body>
+
+    <div class="w3-container" id="justanormalcolumn" style="height: 2200px">
+        <div class="innertube" style="height: 224px; text-align: center;">
+            <h2><a href="decisionmatrix/ACDecisionMatrix.pdf" target="_blank">AC Pavement Treatment Selection</a></h2>
+            <hr />
+            <!--<p class="auto-style3">
+                <span>Check the box of</span>&nbsp; distress and traffic
+                <span>type</span> below for a list of recommended presrevation methods.
+            </p>-->
+            <p class="auto-style3" style="height: 44px">
+                <span>
+                    COPACES Rating&gt;75?&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                    <button type="button" onclick="demo()" style="width: 38px; height: 25px"> Yes </button>
+                    <button type="button" onclick="demo1()" style="width:38px; height: 25px"> No </button>
+                </span>
+            </p>
+
+            <div id="demo1" style="display:none">
+                <br />
+                <p class="auto-style4">
+                    <strong> NO PRESERVATION RECOMMENDED!</strong>
+                </p>
+                <br />
+                <input name="Button1" type="button" value="Reset" id="reset" style="width: 62px; height: 30px" />
+            </div>
+            <div id="demo" style="display:none">
+                <!-- <table style="width: 90%; height: 183px;" align="center"> -->
+                <style>
+                    table {
+                        font-family: arial, sans-serif;
+                        border-collapse: collapse;
+                        width: 100%;
+                    }
+
+                    td,
+                    th {
+                        border: 1px solid #dddddd;
+                        text-align: left;
+                        padding: 8px;
+                    }
+
+                    tr:nth-child(even) {
+                        background-color: #dddddd;
+                    }
+                </style>
+                <table>
+                    <tr>
+                        <td style="width: 290px" class="center" colspan="5">
+                            <span lang="zh-cn">
+                                <strong>Distress</strong>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 1px; width: 290px" class="center">
+                            <span lang="zh-cn">
+                                <strong>Severity Level</strong>
+                            </span>
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            1
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            2
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            3
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 1px; width: 290px" class="center">
+                            <a href="PACESManual/RutDepth.html" target="_blank">Rutting</a>&nbsp;
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="Rut1" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center"></td>
+                        <td style="height: 1px; width: 192px" class="center"></td>
+                        <td style="height: 1px; width: 192px" class="center"></td>
+                       
+
+                    </tr>
+                    <tr>
+                        <td style="width: 290px" class="center">
+                            <a href="PACESManual/Raveling.html" target="_blank">Raveling</a>
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="Rav1" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="Rav2" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="Rav3" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="width: 290px" class="center">
+                            <a href="PACESManual/LoadCracking.html" target="_blank">Load Cracking</a>
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="LC1" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="LC2" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="LC3" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="width: 290px" class="center">
+                            <a href="PACESManual/BlockCracking.html" target="_blank">Block/Transverse Cracking</a>
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="BC1" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="BC2" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="BC3" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center"></td>
+
+                    </tr>
+                    <tr>
+                        <td style="width: 290px; height: 28px" class="center">
+                            <a href="PACESManual/Reflection.html" target="_blank">Reflective Cracking</a>
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="RC1" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="RC2" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="RC3" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center"></td>
+
+                    </tr>
+                    <tr>
+                        <td style="width: 290px; height: 28px" class="center">
+                            <a href="PACESManual/Bleeding.html" target="_blank">Bleeding/Flusing</a>&nbsp;
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="BF1" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="BF2" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="BF3" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center"></td>
+
+                    </tr>
+                    <tr>
+                        <td style="width: 290px; height: 28px" class="center">
+                            <a href="PACESManual/Corrugation.html" target="_blank">Corrugation/Pushing</a>
+                            <!-- reference needs changing-->
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="CP1" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="CP2" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="CP3" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="width: 290px; height: 28px" class="center">
+                            <a href="PACESManual/LossSection.html" target="_blank">Loss of Section</a>
+                            <!-- reference needs changing-->
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="LS1" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="LS2" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="LS3" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center"></td>
+
+                    </tr>
+                    <tr>
+                        <td style="width: 290px; height: 28px" class="center">
+                            <a href="PACESManual/EdgeDistress.html" target="_blank">Edge Distress</a>
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="ED1" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="ED2" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="ED3" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center"></td>
+
+                    </tr>
+                    <tr>
+                        <td style="height: 1px; width: 290px" class="center">
+                            <a href="PACESManual/Patches.html" target="_blank">Patches/Potholes/Local Base failure</a>&nbsp;
+                            <!-- reference needs changing-->
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            <input type="checkbox" id="Pot1" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center"></td>
+                        <td style="height: 1px; width: 192px" class="center"></td>
+                        <td style="height: 1px; width: 192px" class="center"></td>
+                      
+
+                    </tr>
+                </table>
+                <br />
+                <table style="width: 100%; height: 183px;" align="center">
+
+                    <tr>
+                        <td style="width: 290px" class="center" colspan="2">
+                            <span lang="zh-cn">
+                                <strong>AADT</strong>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 290px" class="center">
+                            <span lang="zh-cn">less than 1000</span>
+                        </td>
+                        <td style="width: 192px; height: 28px" class="center">
+                            <input type="checkbox" id="AADT1" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 290px" class="center">
+                            <span lang="zh-cn">1000 to 4000</span>
+                        </td>
+                        <td style="width: 192px; height: 28px" class="center">
+                            <input type="checkbox" id="AADT2" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 290px" class="center">
+                            <span lang="zh-cn">greater than 4000</span>
+                        </td>
+                        <td style="width: 192px; height: 28px" class="center">
+                            <input type="checkbox" id="AADT3" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 290px" class="center" colspan="2">
+                            <span lang="zh-cn">
+                                <strong>Truck percentage</strong>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 192px; height: 28px" class="center" colspan="2">
+                            <input type="text" id="truck" value="0" />
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <input name="SelectMaterial" type="button" value="Select Treatment(s)" onclick="selectTreatment()" style="height: 30px" />
+                <input name="Button2" type="button" value="Reset" id="reset1"  style="width: 62px; height: 30px" />
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        
+
+        <br />
+        <div class="w3-center" id="recommend" style="display: none; height: 30px">Recommended Preservation Methods:</div>
+        <div id="selectedTreat" class="w3-center" style="display: none;"></div>
+        <br />
+        <br />
+        <br />
+        
+        <div class="w3-center" id="optional" style="display: none; height: 30px">Optional Preservation Methods:</div>
+        <div id="selectedTreat2" class="w3-center" style="display: none;"></div>
+
+     <div id="contentcolumn-bottom"></div>
+
+
+
+     <script type="text/javascript" src="jquery.js"></script>
+    <script>
+
+        $(document).ready( function() {
+            $("#reset").on("click", function() {
+                $("#contentcolumn").load("embed/matrix_embedded.html");
+                });
+            });
+        $(document).ready( function() {
+            $("#reset1").on("click", function() {
+                $("#contentcolumn").load("embed/matrix_embedded.html");
+                });
+            });
+
+
+    </script>
+</body>
+
+</html>

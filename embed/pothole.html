@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="w3-container" id="justanormalcolumn">
+        <br />
+        <div class="w3-center" style="height: 168px">
+            <a href="#" id="pothole">
+                <img alt="" height="161" src="images/pothole0.png" width="285" />
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            <br />
+            <br />
+        </div>
+        <div class="w3-bar w3-white ">
+            <a href="#" id="pothole1" class="w3-bar-item w3-button w3-mobile w3-grey w3-border">General</a>
+            <a href="#" id="pothole2" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Project Selection</a>
+            <a href="#" id="pothole3" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Material</a>
+            <a href="#" id="pothole4" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Construction</a>
+            <a href="#" id="pothole5" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Performance</a>
+            <a href="#" id="pothole6" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Standards/References</a>
+        </div>
+       <p class="MsoNormal">Pothole patching is the process of filling potholes in the asphalt pavement. Pothole is the localized distress in an asphalt-surfaced pavement.  Because of the action of climate and traffic on the pavement, some pieces of asphalt pavement become weakened. Then they are removed under the action of traffic, pothole occurred. (Wilson and Romine 1994) The pothole patching helps control further deterioration and expensive repair of the pavement.</p>
+                    <p class="MsoNormal">GDOT mainly use four types of the pothole patching: cold-mix patching, hot-mix patching, mastic patching and spray-injection patching. The differences are the materials used. Spray-injection patching blast the asphalt into the pothole to avoid the additional compaction.</p>
+
+
+
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+
+            $(document).ready( function() {
+                $("#pothole").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole1").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole2").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole2.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole3").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole3.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole4").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole4.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole5").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole5.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pothole6").on("click", function() {
+                    $("#contentcolumn").load("embed/pothole6.html");
+                });
+            });
+
+
+
+    </script>
+
+
+
+</body>
+</html>

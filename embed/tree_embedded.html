@@ -1,0 +1,2629 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+
+
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+        <title>GDOT Pavement Preservation Interactive Tutorial</title>
+
+        <link rel="stylesheet" type="text/css" href="PPIT.css" />
+
+        <style type="text/css">
+
+            .auto-style3 {
+
+                text-align: left;
+
+            }
+
+
+
+            .auto-style4 {
+
+                font-size: x-large;
+
+            }
+
+        </style>
+
+        <script type="text/javascript">
+
+            var bcDeductTable = [
+
+                [0, 0, 0],
+
+                [0, 1, 2],
+
+                [1, 1, 3],
+
+                [1, 2, 4],
+
+                [2, 3, 5],
+
+                [2, 3, 6],
+
+                [2, 4, 7],
+
+                [3, 4, 7],
+
+                [3, 4, 8],
+
+                [3, 5, 8],
+
+                [4, 5, 9],
+
+                [4, 6, 9],
+
+                [4, 6, 10],
+
+                [5, 7, 10],
+
+                [5, 7, 11],
+
+                [5, 8, 11],
+
+                [5, 8, 12],
+
+                [5, 8, 12],
+
+                [5, 9, 13],
+
+                [5, 9, 13],
+
+                [6, 10, 14],
+
+                [6, 10, 14],
+
+                [6, 10, 14],
+
+                [6, 11, 15],
+
+                [6, 11, 15],
+
+                [6, 11, 15],
+
+                [6, 12, 16],
+
+                [6, 12, 16],
+
+                [7, 12, 16],
+
+                [7, 13, 17],
+
+                [7, 13, 17],
+
+                [7, 13, 17],
+
+                [7, 13, 18],
+
+                [8, 13, 18],
+
+                [8, 14, 18],
+
+                [8, 14, 19],
+
+                [8, 14, 19],
+
+                [8, 14, 19],
+
+                [8, 15, 20],
+
+                [8, 15, 20],
+
+                [9, 15, 21],
+
+                [9, 15, 21],
+
+                [9, 15, 21],
+
+                [9, 15, 22],
+
+                [9, 16, 22],
+
+                [9, 16, 22],
+
+                [9, 16, 23],
+
+                [9, 17, 23],
+
+                [10, 17, 23],
+
+                [10, 17, 24],
+
+                [10, 18, 24],
+
+                [10, 18, 24],
+
+                [10, 18, 25],
+
+                [10, 18, 25],
+
+                [10, 18, 25],
+
+                [10, 19, 26],
+
+                [10, 19, 26],
+
+                [11, 19, 27],
+
+                [11, 19, 27],
+
+                [11, 20, 28],
+
+                [11, 20, 28],
+
+                [11, 21, 29],
+
+                [11, 21, 29],
+
+                [12, 22, 30],
+
+                [12, 22, 31],
+
+                [12, 23, 32],
+
+                [12, 23, 33],
+
+                [13, 24, 33],
+
+                [13, 24, 34],
+
+                [14, 25, 35],
+
+                [15, 26, 36],
+
+                [15, 27, 38],
+
+                [16, 28, 39],
+
+                [16, 29, 41],
+
+                [17, 30, 43],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+                [18, 32, 45],
+
+            ];
+
+            var lcDeductTable = [
+
+                [0, 0, 0, 0],
+
+                [1, 3, 5, 6],
+
+                [2, 4, 7, 10],
+
+                [3, 5, 9, 13],
+
+                [3, 7, 11, 16],
+
+                [4, 8, 13, 18],
+
+                [4, 9, 14, 21],
+
+                [5, 9, 15, 22],
+
+                [5, 10, 17, 24],
+
+                [6, 11, 19, 26],
+
+                [6, 12, 20, 27],
+
+                [6, 13, 21, 29],
+
+                [7, 13, 22, 30],
+
+                [7, 14, 22, 31],
+
+                [7, 14, 23, 32],
+
+                [7, 15, 24, 33],
+
+                [7, 15, 25, 34],
+
+                [8, 16, 26, 36],
+
+                [8, 16, 26, 37],
+
+                [8, 16, 27, 38],
+
+                [8, 17, 28, 39],
+
+                [8, 17, 28, 40],
+
+                [8, 17, 29, 40],
+
+                [8, 18, 29, 41],
+
+                [9, 18, 30, 42],
+
+                [9, 19, 31, 43],
+
+                [9, 19, 32, 44],
+
+                [9, 19, 32, 45],
+
+                [9, 20, 33, 46],
+
+                [10, 20, 33, 47],
+
+                [10, 21, 34, 48],
+
+                [10, 21, 34, 49],
+
+                [10, 21, 35, 50],
+
+                [10, 22, 36, 51],
+
+                [11, 22, 36, 52],
+
+                [11, 23, 37, 53],
+
+                [11, 23, 38, 54],
+
+                [11, 24, 39, 55],
+
+                [12, 25, 40, 56],
+
+                [12, 25, 41, 58],
+
+                [13, 26, 42, 59],
+
+                [13, 27, 44, 60],
+
+                [13, 27, 45, 62],
+
+                [14, 28, 46, 65],
+
+                [14, 29, 48, 67],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70],
+
+                [15, 30, 50, 70]
+
+            ];
+
+            var rvDeductTable = [
+
+                [0, 0, 0],
+
+                [2, 4, 6],
+
+                [2, 4, 6],
+
+                [2, 4, 6],
+
+                [2, 4, 6],
+
+                [2, 4, 6],
+
+                [5, 8, 12],
+
+                [5, 8, 12],
+
+                [5, 8, 12],
+
+                [5, 8, 12],
+
+                [5, 8, 12],
+
+                [5, 8, 12],
+
+                [5, 8, 12],
+
+                [5, 8, 12],
+
+                [5, 8, 12],
+
+                [5, 8, 12],
+
+                [6, 11, 16],
+
+                [6, 11, 16],
+
+                [6, 11, 16],
+
+                [6, 11, 16],
+
+                [6, 11, 16],
+
+                [6, 11, 16],
+
+                [6, 11, 16],
+
+                [6, 11, 16],
+
+                [6, 11, 16],
+
+                [6, 11, 16],
+
+                [8, 14, 20],
+
+                [8, 14, 20],
+
+                [8, 14, 20],
+
+                [8, 14, 20],
+
+                [8, 14, 20],
+
+                [8, 14, 20],
+
+                [8, 14, 20],
+
+                [8, 14, 20],
+
+                [8, 14, 20],
+
+                [8, 14, 20],
+
+                [10, 17, 25],
+
+                [10, 17, 25],
+
+                [10, 17, 25],
+
+                [10, 17, 25],
+
+                [10, 17, 25],
+
+                [10, 17, 25],
+
+                [10, 17, 25],
+
+                [10, 17, 25],
+
+                [10, 17, 25],
+
+                [10, 17, 25],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30],
+
+                [13, 21, 30]
+
+            ];
+
+            window.onload = function() {
+
+                document.getElementById("rating").style.display = "none";
+
+                document.getElementById("No Suggestions").style.display = "none";
+
+            }
+
+            //     var form = document.getElementById("myform");
+
+            //     form.onsubmit = hitSubmit;
+
+            // }
+
+            function hitSubmit() {
+
+                document.getElementById("rating").style.display = "none";
+
+                document.getElementById("No Suggestions").style.display = "none";
+
+                var ruttingIn = parseInt(document.getElementById("ruttingin").value);
+
+                var ruttingOut = parseInt(document.getElementById("ruttingout").value);
+
+                var loadCracking1 = parseInt(document.getElementById("lcrackingval1").value);
+
+                var loadCracking2 = parseInt(document.getElementById("lcrackingval2").value);
+
+                var loadCracking3 = parseInt(document.getElementById("lcrackingval3").value);
+
+                var loadCracking4 = parseInt(document.getElementById("lcrackingval4").value);
+
+                // var blkCrackingLvl = parseInt(document.getElementById("bcrackinglvl").value);
+
+                if (document.getElementById('bcrackinglvl3').checked) {
+
+                    blkCrackingLvl = parseInt(document.getElementById("bcrackinglvl3").value);
+
+                }
+
+                if (document.getElementById('bcrackinglvl2').checked) {
+
+                    blkCrackingLvl = parseInt(document.getElementById("bcrackinglvl2").value);
+
+                }
+
+                if (document.getElementById('bcrackinglvl1').checked) {
+
+                    blkCrackingLvl = parseInt(document.getElementById("bcrackinglvl1").value);
+
+                }
+
+                if (document.getElementById('bcrackinglvl0').checked) {
+
+                    blkCrackingLvl = parseInt(document.getElementById("bcrackinglvl0").value);
+
+                }
+
+                var blkCrackingVal = parseInt(document.getElementById("bcrackingval").value);
+
+                // var rcrackinglvl = parseInt(document.getElementById("rcrackinglvl").value);
+
+                if (document.getElementById('rcrackinglvl3').checked) {
+
+                    rcrackinglvl = parseInt(document.getElementById("rcrackinglvl3").value);
+
+                }
+
+                if (document.getElementById('rcrackinglvl2').checked) {
+
+                    rcrackinglvl = parseInt(document.getElementById("rcrackinglvl2").value);
+
+                }
+
+                if (document.getElementById('rcrackinglvl1').checked) {
+
+                    rcrackinglvl = parseInt(document.getElementById("rcrackinglvl1").value);
+
+                }
+
+                if (document.getElementById('rcrackinglvl0').checked) {
+
+                    rcrackinglvl = parseInt(document.getElementById("rcrackinglvl0").value);
+
+                }
+
+                var rcrackingval = parseInt(document.getElementById("rcrackingval").value);
+
+                //var ravelinglvl = parseInt(document.getElementById("ravelinglvl").value);
+
+                if (document.getElementById('ravelinglvl3').checked) {
+
+                    ravelinglvl = parseInt(document.getElementById("ravelinglvl3").value);
+
+                }
+
+                if (document.getElementById('ravelinglvl2').checked) {
+
+                    ravelinglvl = parseInt(document.getElementById("ravelinglvl2").value);
+
+                }
+
+                if (document.getElementById('ravelinglvl1').checked) {
+
+                    ravelinglvl = parseInt(document.getElementById("ravelinglvl1").value);
+
+                }
+
+                if (document.getElementById('ravelinglvl0').checked) {
+
+                    ravelinglvl = parseInt(document.getElementById("ravelinglvl0").value);
+
+                }
+
+                var ravelingval = parseInt(document.getElementById("ravelingval").value);
+
+                //var edgelvl = parseInt(document.getElementById("edgelvl").value);
+
+                if (document.getElementById('edgelvl3').checked) {
+
+                    edgelvl = parseInt(document.getElementById("edgelvl3").value);
+
+                }
+
+                if (document.getElementById('edgelvl2').checked) {
+
+                    edgelvl = parseInt(document.getElementById("edgelvl2").value);
+
+                }
+
+                if (document.getElementById('edgelvl1').checked) {
+
+                    edgelvl = parseInt(document.getElementById("edgelvl1").value);
+
+                }
+
+                if (document.getElementById('edgelvl0').checked) {
+
+                    edgelvl = parseInt(document.getElementById("edgelvl0").value);
+
+                }
+
+                var edgeval = parseInt(document.getElementById("edgeval").value);
+
+                //var bleedinglvl = parseInt(document.getElementById("bleedinglvl").value);
+
+                if (document.getElementById('bleedinglvl3').checked) {
+
+                    bleedinglvl = parseInt(document.getElementById("bleedinglvl3").value);
+
+                }
+
+                if (document.getElementById('bleedinglvl2').checked) {
+
+                    bleedinglvl = parseInt(document.getElementById("bleedinglvl2").value);
+
+                }
+
+                if (document.getElementById('bleedinglvl1').checked) {
+
+                    bleedinglvl = parseInt(document.getElementById("bleedinglvl1").value);
+
+                }
+
+                if (document.getElementById('bleedinglvl0').checked) {
+
+                    bleedinglvl = parseInt(document.getElementById("bleedinglvl0").value);
+
+                }
+
+                var bleedingval = parseInt(document.getElementById("bleedingval").value);
+
+
+
+                //var corrugationslvl = parseInt(document.getElementById("corrugationslvl").value);
+
+                if (document.getElementById('corrugationslvl3').checked) {
+
+                    corrugationslvl = parseInt(document.getElementById("corrugationslvl3").value);
+
+                }
+
+                if (document.getElementById('corrugationslvl2').checked) {
+
+                    corrugationslvl = parseInt(document.getElementById("corrugationslvl2").value);
+
+                }
+
+                if (document.getElementById('corrugationslvl1').checked) {
+
+                    corrugationslvl = parseInt(document.getElementById("corrugationslvl1").value);
+
+                }
+
+                if (document.getElementById('corrugationslvl0').checked) {
+
+                    corrugationslvl = parseInt(document.getElementById("corrugationslvl0").value);
+
+                }
+
+                var corrugationsval = parseInt(document.getElementById("corrugationsval").value);
+
+                var potholesVal = parseInt(document.getElementById("potholes").value);
+
+                //var lossofsectionlvl = parseInt(document.getElementById("lossofsectionlvl").value);
+
+                if (document.getElementById('lossofsectionlvl3').checked) {
+
+                    lossofsectionlvl = parseInt(document.getElementById("lossofsectionlvl3").value);
+
+                }
+
+                if (document.getElementById('lossofsectionlvl2').checked) {
+
+                    lossofsectionlvl = parseInt(document.getElementById("lossofsectionlvl2").value);
+
+                }
+
+                if (document.getElementById('lossofsectionlvl1').checked) {
+
+                    lossofsectionlvl = parseInt(document.getElementById("lossofsectionlvl1").value);
+
+                }
+
+                if (document.getElementById('lossofsectionlvl0').checked) {
+
+                    lossofsectionlvl = parseInt(document.getElementById("lossofsectionlvl0").value);
+
+                }
+
+                var lossofsectionval = parseInt(document.getElementById("lossofsectionval").value);
+
+
+
+                var AADT = parseInt(document.getElementById("aadt").value);
+
+                var crackWidth = document.getElementById("crackingwidth").checked;
+
+                // Calculate Deducts
+
+                var ruttingDed = Math.floor((getRuttingDeduct(ruttingIn) + getRuttingDeduct(ruttingOut)) / 2);
+
+                var lcrackDed = Math.max(getLoadCrackingDeduct(1, loadCracking1), getLoadCrackingDeduct(2, loadCracking2), getLoadCrackingDeduct(3, loadCracking3), getLoadCrackingDeduct(4, loadCracking4));
+
+                var bcrackDed = getBlockCrackingDeduct(blkCrackingLvl, blkCrackingVal);
+
+                var rcrackDed = getReflDeduct(rcrackinglvl, rcrackingval);
+
+                var ravDed = getRavelingDeduct(ravelinglvl, ravelingval);
+
+                var edgeDed = getEdgeDeduct(edgelvl, edgeval);
+
+                var bleedDed = getBledDeduct(bleedinglvl, bleedingval);
+
+                var corrDed = getCorrDeduct(corrugationslvl, corrugationsval);
+
+                var pothDed = getPothDeduct(potholesVal);
+
+                var lossDed = getLossDeduct(lossofsectionlvl, lossofsectionval);
+
+                //alert(ruttingDed +","+ bcrackDed +","+ rcrackDed +","+ ravDed +","+ edgeDed +","+ bleedDed +","+ corrDed +","+ pothDed +","+ lossDed +","+ crackWidth +","+ lcrackDed);
+
+
+
+                var totalDed = ruttingDed + bcrackDed + rcrackDed + ravDed + edgeDed + bleedDed + corrDed + pothDed + lossDed + lcrackDed;
+
+                //alert("Rating: " + (100 - totalDed));
+
+                var ratingElem = document.getElementById("rating");
+
+                ratingElem.innerHTML = "Rating: " + (100 - totalDed);
+
+                ratingElem.style.display = "block";
+
+                // document.getElementById("Cracking Seal").style.display = "table-cell";
+
+                // document.getElementById("Chip Seal").style.display = "table-cell";
+
+                // document.getElementById("Fog Seal").style.display = "table-cell";
+
+                // document.getElementById("Micro Milling").style.display = "table-cell";
+
+                // document.getElementById("Micro Surfacing").style.display = "table-cell";
+
+                // document.getElementById("Thin Overlay").style.display = "table-cell";
+
+                // document.getElementById("Diamond Grinding").style.display = "table-cell";
+
+                // document.getElementById("Dowel Bar Retrofit").style.display = "table-cell";
+
+                // document.getElementById("Full Depth Repair").style.display = "table-cell";
+
+                // document.getElementById("Joint Sealing").style.display = "table-cell";
+
+                // document.getElementById("Partial Depth Repair").style.display = "table-cell";
+
+
+
+                // Decision Tree
+
+                var suggestion = "";
+
+                if (totalDed >= 30) {
+
+                    if (ruttingDed < 5 && lcrackDed + bcrackDed + pothDed >= 30) {
+
+                        // Overlay
+
+                        suggestion += "Overlay, ";
+
+                    }
+
+                    if (ruttingDed < 12 && lcrackDed + bcrackDed + pothDed >= 30 && (lcrackDed > 20 || bcrackDed > 20 || rcrackDed > 8)) {
+
+                        // Chip Seal and Overlay
+
+                        suggestion += "Chip Seal and Overlay, ";
+
+                        document.getElementById("ChipSeal").style.display = "table-cell";
+
+                    }
+
+                    if (ruttingDed <= 12 && ruttingDed >= 5 && lcrackDed + bcrackDed < 25) {
+
+                        // Level and Overlay
+
+                        document.getElementById("ThinOverlay").style.display = "table-cell";
+
+                    }
+
+                    if (ruttingDed <= 12 && ruttingDed >= 5 && lcrackDed + bcrackDed >= 18) {
+
+                        // Mill and Overlay
+
+                        suggestion += "Mill and Overlay, ";
+
+                        document.getElementById("MicroMilling").style.display = "table-cell";
+
+                    }
+
+                    if (lcrackDed + bcrackDed + ruttingDed + rcrackDed + ravDed + bleedDed + pothDed + lossDed + edgeDed + corrDed >= 30) {
+
+                        // Level and Overlay
+
+                    }
+
+                    suggestion += "Level and Overlay";
+
+                    //document.getElementById("Level").style.display = "table-cell"; DOESN'T EXIST YET
+
+                    document.getElementById("ThinOverlay").style.display = "table-cell";
+
+                } else if (totalDed >= 25) {
+
+                    if (bcrackDed + lcrackDed + rcrackDed > 15 && crackWidth) {
+
+                        // Cracking Seal
+
+                        suggestion += "Cracking Seal, ";
+
+                        document.getElementById("CrackingSeal").style.display = "table-cell";
+
+                    }
+
+                    if (lcrackDed >= 17) {
+
+                        // Strip Seal
+
+                        suggestion += "Strip Seal, ";
+
+                        //document.getElementById("Strip Seal").style.display = "table-cell"; DOESN'T EXIST YET
+
+                        document.getElementById("FogSeal").style.display = "table-cell";
+
+                    }
+
+                    if (ruttingDed >= 16) {
+
+                        // Mill + Spot Overlay
+
+                        suggestion += "Mill + Spot Overlay, ";
+
+                        document.getElementById("MicroMilling").style.display = "table-cell";
+
+                        //document.getElementById("Spot Overlay").style.display = "table-cell"; DOESN'T EXIST YET
+
+                    }
+
+                    if ((AADT < 2000 && ravDed > 25 && ravDed < 30) || (ravDed + ruttingDed + rcrackDed + lcrackDed > 25 && ruttingDed < 5)) {
+
+                        // Chip Seal
+
+                        suggestion += "Chip Seal, ";
+
+                        document.getElementById("ChipSeal").style.display = "table-cell";
+
+                    }
+
+                    suggestion += "Overlay";
+
+                    document.getElementById("ThinOverlay").style.display = "table-cell";
+
+                } else if (totalDed >= 15) {
+
+                    if (bcrackDed + lcrackDed + rcrackDed > 15 && crackWidth) {
+
+                        // Cracking Seal
+
+                        suggestion += "Cracking Seal, ";
+
+                        document.getElementById("CrackingSeal").style.display = "table-cell";
+
+                    }
+
+                    if (lcrackDed >= 17) {
+
+                        // Strip Seal
+
+                        suggestion += "Strip Seal, ";
+
+                        document.getElementById("FogSeal").style.display = "table-cell";
+
+                        //document.getElementById("Strip Seal").style.display = "table-cell"; DOESN'T EXIST YET
+
+                    }
+
+                    if (ruttingDed >= 16) {
+
+                        // Mill + Spot Overlay
+
+                        suggestion += "Mill + Spot Overlay, ";
+
+                        document.getElementById("MicroMilling").style.display = "table-cell";
+
+                        //document.getElementById("Spot Overlay").style.display = "table-cell"; DOESN'T EXIST YET
+
+                    }
+
+                    if (suggestion.length > 2) {
+
+                        suggestion = suggestion.substring(0, suggestion.length - 2);
+
+                    }
+
+                }
+
+                if (suggestion === "") {
+
+                    suggestion += "No solutions identified";
+
+                    document.getElementById("No Suggestions").style.display = "block";
+
+                }
+
+                // alert("Possible Solutions: " + suggestion);
+
+                return false;
+
+            }
+
+
+
+            function getBlockCrackingDeduct(lev, ext) {
+
+                if (lev == 0) {
+
+                    return 0;
+
+                }
+
+                return bcDeductTable[ext][lev - 1];
+
+            }
+
+
+
+            function getLoadCrackingDeduct(lev, ext) {
+
+                if (lev == 0) {
+
+                    return 0;
+
+                }
+
+                return lcDeductTable[ext][lev - 1];
+
+            }
+
+
+
+            function getRavelingDeduct(lev, ext) {
+
+                if (lev == 0) {
+
+                    return 0;
+
+                }
+
+                return rvDeductTable[ext][lev - 1];
+
+            }
+
+
+
+            function getRuttingDeduct(depth) {
+
+                if (depth <= 0) {
+
+                    return 0;
+
+                }
+
+                switch (depth) {
+
+                    case 1:
+
+                        return 2;
+
+                    case 2:
+
+                        return 5;
+
+                    case 3:
+
+                        return 12;
+
+                    case 4:
+
+                        return 16;
+
+                    case 5:
+
+                        return 20;
+
+                    default:
+
+                        return 24;
+
+                }
+
+            }
+
+
+
+            function getPothDeduct(num) {
+
+                if (num == 0)
+
+                    return 0;
+
+                else if (num <= 2)
+
+                    return 2;
+
+                else if (num <= 6)
+
+                    return 5;
+
+                else if (num <= 10)
+
+                    return 10;
+
+                else if (num <= 15)
+
+                    return 17;
+
+                else
+
+                    return 25;
+
+            }
+
+
+
+            function getBledDeduct(level, extent) {
+
+                //bleeding deduct
+
+                if (level == 0)
+
+                    return 0;
+
+                else if (level == 1) {
+
+                    if (extent <= 10)
+
+                        return 2;
+
+                    else if (extent <= 30)
+
+                        return 5;
+
+                    else
+
+                        return 8;
+
+                } else {
+
+                    if (extent <= 10)
+
+                        return 5;
+
+                    else if (extent <= 30)
+
+                        return 10;
+
+                    else
+
+                        return 15;
+
+                }
+
+            }
+
+
+
+            function getEdgeDeduct(level, extent) {
+
+                //edge deduct
+
+                if (level == 0)
+
+                    return 0;
+
+                else if (level == 1) {
+
+                    if (extent <= 25)
+
+                        return 1;
+
+                    else if (extent <= 50)
+
+                        return 2;
+
+                    else if (extent <= 75)
+
+                        return 3;
+
+                    else
+
+                        return 4;
+
+                } else if (level == 2) {
+
+                    if (extent <= 25)
+
+                        return 2;
+
+                    else if (extent <= 50)
+
+                        return 4;
+
+                    else if (extent <= 75)
+
+                        return 6;
+
+                    else
+
+                        return 7;
+
+                } else {
+
+                    if (extent <= 25)
+
+                        return 3;
+
+                    else if (extent <= 50)
+
+                        return 6;
+
+                    else if (extent <= 75)
+
+                        return 8;
+
+                    else
+
+                        return 10;
+
+                }
+
+            }
+
+
+
+            function getCorrDeduct(level, extent) {
+
+                //corr deduct
+
+                if (level == 0)
+
+                    return 0;
+
+                else if (level == 1) {
+
+                    if (extent <= 10)
+
+                        return 1;
+
+                    else if (extent <= 25)
+
+                        return 2;
+
+                    else
+
+                        return 4;
+
+                } else if (level == 2) {
+
+                    if (extent <= 10)
+
+                        return 2;
+
+                    else if (extent <= 25)
+
+                        return 4;
+
+                    else
+
+                        return 7;
+
+                } else {
+
+                    if (extent <= 10)
+
+                        return 3;
+
+                    else if (extent <= 25)
+
+                        return 6;
+
+                    else
+
+                        return 10;
+
+                }
+
+            }
+
+
+
+            function getLossDeduct(level, extent) {
+
+                //loss deduct
+
+                if (level == 0)
+
+                    return 0;
+
+                else if (level == 1) {
+
+                    if (extent <= 25)
+
+                        return 0;
+
+                    else if (extent <= 50)
+
+                        return 1;
+
+                    else if (extent <= 75)
+
+                        return 2;
+
+                    else
+
+                        return 3;
+
+                } else if (level == 2) {
+
+                    if (extent <= 25)
+
+                        return 2;
+
+                    else if (extent <= 50)
+
+                        return 4;
+
+                    else if (extent <= 75)
+
+                        return 6;
+
+                    else
+
+                        return 8;
+
+                } else {
+
+                    if (extent <= 25)
+
+                        return 6;
+
+                    else if (extent <= 50)
+
+                        return 8;
+
+                    else if (extent <= 75)
+
+                        return 10;
+
+                    else
+
+                        return 12;
+
+                }
+
+            }
+
+
+
+            function getReflDeduct(level, extent) {
+
+                //refl deduct
+
+                if (level == 0)
+
+                    return 0;
+
+                else if (level == 1) {
+
+                    if (extent <= 4)
+
+                        return 0;
+
+                    else if (extent <= 15)
+
+                        return 3;
+
+                    else if (extent <= 30)
+
+                        return 5;
+
+                    else if (extent <= 45)
+
+                        return 6;
+
+                    else if (extent <= 50)
+
+                        return 8;
+
+                    else
+
+                        return 10;
+
+                } else if (level == 2) {
+
+                    if (extent <= 4)
+
+                        return 0;
+
+                    else if (extent <= 15)
+
+                        return 6;
+
+                    else if (extent <= 30)
+
+                        return 8;
+
+                    else if (extent <= 45)
+
+                        return 11;
+
+                    else if (extent <= 50)
+
+                        return 14;
+
+                    else
+
+                        return 20;
+
+                } else {
+
+                    if (extent <= 4)
+
+                        return 0;
+
+                    else if (extent <= 15)
+
+                        return 10;
+
+                    else if (extent <= 30)
+
+                        return 15;
+
+                    else if (extent <= 45)
+
+                        return 20;
+
+                    else if (extent <= 50)
+
+                        return 25;
+
+                    else
+
+                        return 30;
+
+                }
+
+            }
+
+        </script>
+
+    </head>
+
+
+
+    <body>
+
+        <div id="justanormalcolumn" style="height: 1250px">
+
+                    <div class="innertube" style="height: 224px; text-align: center;">
+
+                        <h1>Ashpalt Pavement Preservation Method Selection</h1>
+
+                        <hr />
+
+                        <p class="auto-style3">
+
+                            <span>
+
+                                <strong>Fill the form below with distress details and receive threatment recommendations</strong>
+
+                            </span>
+
+                        </p>
+
+                        <br/>
+
+
+                        <style>
+
+                            table {
+
+                                font-family: arial, sans-serif;
+
+                                border-collapse: collapse;
+
+                                width: 100%;
+
+                            }
+
+
+
+                            td,
+
+                            th {
+
+                                border: 1px solid #dddddd;
+
+                                text-align: left;
+
+                                padding: 8px;
+
+                            }
+
+
+
+                            tr:nth-child(even) {
+
+                                background-color: #dddddd;
+
+                            }
+
+                        </style>
+
+                        <table>
+                            <tr>
+
+                                <td style="height: 1px; width: 290px" class="center">
+
+                                    <span lang="zh-cn">
+
+                                        <strong>DISTRESS</strong>
+
+                                    </span>
+
+                                </td>
+                                <td style="height: 1px; width: 290px" class="center" colspan="5">
+
+                                    <span lang="zh-cn">
+
+                                        <strong>Severity Level</strong>
+
+                                    </span>
+
+                                </td>
+
+                            <tr>
+
+                                <td style="height: 1px; width: 290px" class="center">
+
+                                    <span lang="zh-cn">
+
+                                        <strong></strong>
+
+                                    </span>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    1
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    2
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    3
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    4
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <span lang="zh-cn">
+
+                                        <strong>Extent%</strong>
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="height: 1px; width: 290px" class="center">
+
+                                    <a href="#" id="treeloadcracking1" >Load Cracking</a>&nbsp;
+
+                                </td>
+
+                                <td style="text-align:center;">
+
+                                    <div class="form-input dob">
+
+                                        <span class="form-sub-label">
+
+                                            <input type="checkbox" id="lcrackinglv1" checked>
+
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center"></td>
+
+                                <td style="height: 1px; width: 192px" class="center"></td>
+
+                                <td style="height: 1px; width: 192px" class="center"></td>
+
+                                <td style="text-align:center;">
+
+                                    <span class="form-sub-label">
+
+                                        <input type="number" class="percent" id="lcrackingval1" value="0" style="width: 3em">
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="height: 1px; width: 290px" class="center">
+
+                                    <a href="#" id="treeloadcracking2">Load Cracking</a>&nbsp;
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center"></td>
+
+                                <td style="text-align:center;">
+
+                                    <div class="form-input dob">
+
+                                        <span class="form-sub-label">
+
+                                            <input type="checkbox" id="lcrackinglv1" checked>
+
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center"></td>
+
+                                <td style="height: 1px; width: 192px" class="center"></td>
+
+                                <td style="text-align:center;">
+
+                                    <span class="form-sub-label">
+
+                                        <input type="number" class="percent" id="lcrackingval2" value="0" style="width: 3em">
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="height: 1px; width: 290px" class="center">
+
+                                    <a href="#" id="treeloadcracking3">Load Cracking</a>&nbsp;
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center"></td>
+
+                                <td style="height: 1px; width: 192px" class="center"></td>
+
+                                <td style="text-align:center;">
+
+                                    <div class="form-input dob">
+
+                                        <span class="form-sub-label">
+
+                                            <input type="checkbox" id="lcrackinglv1" checked>
+
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center"></td>
+
+                                <td style="text-align:center;">
+
+                                    <span class="form-sub-label">
+
+                                        <input type="number" class="percent" id="lcrackingval3" value="0" style="width: 3em">
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="height: 1px; width: 290px" class="center">
+
+                                    <a href="#" id="treeloadcracking4">Load Cracking</a>&nbsp;
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center"></td>
+
+                                <td style="height: 1px; width: 192px" class="center"></td>
+
+                                <td style="height: 1px; width: 192px" class="center"></td>
+
+                                <td style="text-align:center;">
+
+                                    <div class="form-input dob">
+
+                                        <span class="form-sub-label">
+
+                                            <input type="checkbox" id="lcrackinglv1" checked>
+
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+                                <td style="text-align:center;">
+
+                                    <span class="form-sub-label">
+
+                                        <input type="number" class="percent" id="lcrackingval4" value="0" style="width: 3em">
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="height: 1px; width: 290px" class="center">
+
+                                    <a href="#" id="treeblockcracking">Block/Trans Cracking</a>&nbsp;
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="bcrackinglvl0" name="bcrackinglvl" value="0" checked="checked"> 0 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="bcrackinglvl1" name="bcrackinglvl" value="1"> 1 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="bcrackinglvl2" name="bcrackinglvl" value="2"> 2 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="bcrackinglvl3" name="bcrackinglvl" value="3"> 3 </label>
+
+                                </td>
+
+                                <td style="text-align:center;">
+
+                                    <span class="form-sub-label">
+
+                                        <input type="number" class="percent" id="bcrackingval" value="0" style="width: 3em">
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="height: 1px; width: 290px" class="center">
+
+                                    <a href="#" id="treereflection">Reflection Cracking</a>&nbsp;
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="rcrackinglvl0" name="rcrackinglvl" value="0" checked="checked"> 0 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="rcrackinglvl1" name="rcrackinglvl" value="1"> 1 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="rcrackinglvl2" name="rcrackinglvl" value="2"> 2 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="rcrackinglvl3" name="rcrackinglvl" value="3"> 3 </label>
+
+                                </td>
+
+                                <td style="text-align:center;">
+
+                                    <span class="form-sub-label">
+
+                                        <input type="number" class="percent" id="rcrackingval" value="0" style="width: 3em">
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="height: 1px; width: 290px" class="center">
+
+                                    <a href="#" id="treeraveling">Raveling</a>&nbsp;
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="ravelinglvl0" name="ravelinglvl" value="0" checked="checked"> 0 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="ravelinglvl1" name="ravelinglvl" value="1"> 1 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="ravelinglvl2" name="ravelinglvl" value="2"> 2 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="ravelinglvl3" name="ravelinglvl" value="3"> 3 </label>
+
+                                </td>
+
+                                <td style="text-align:center;">
+
+                                    <span class="form-sub-label">
+
+                                        <input type="number" class="percent" id="ravelingval" value="0" style="width: 3em">
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="height: 1px; width: 290px" class="center">
+
+                                    <a href="#" id="treeedgedistress">Edge Distress</a>&nbsp;
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="edgelvl0" name="edgelvl" value="0" checked="checked"> 0 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="edgelvl1" name="edgelvl" value="1"> 1 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="edgelvl2" name="edgelvl" value="2"> 2 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="edgelvl3" name="edgelvl" value="3"> 3 </label>
+
+                                </td>
+
+                                <td style="text-align:center;">
+
+                                    <span class="form-sub-label">
+
+                                        <input type="number" class="percent" id="edgeval" value="0" style="width: 3em">
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="height: 1px; width: 290px" class="center">
+
+                                    <a href="#" id="treebleeding">Bleeding/ Flushing</a>&nbsp;
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="bleedinglvl0" name="bleedinglvl" value="0" checked="checked"> 0 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="bleedinglvl1" name="bleedinglvl" value="1"> 1 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="bleedinglvl2" name="bleedinglvl" value="2"> 2 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="bleedinglvl3" name="bleedinglvl" value="3"> 3 </label>
+
+                                </td>
+
+                                <td style="text-align:center;">
+
+                                    <span class="form-sub-label">
+
+                                        <input type="number" class="percent" id="bleedingval" value="0" style="width: 3em">
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="height: 1px; width: 290px" class="center">
+
+                                    <a href="#" id="treecorrugations">Corrugations/ Pushing</a>&nbsp;
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="corrugationslvl0" name="corrugationslvl" value="0" checked="checked"> 0 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="corrugationslvl1" name="corrugationslvl" value="1"> 1 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="corrugationslvl2" name="corrugationslvl" value="2"> 2 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="corrugationslvl3" name="corrugationslvl" value="3"> 3 </label>
+
+                                </td>
+
+                                <td style="text-align:center;">
+
+                                    <span class="form-sub-label">
+
+                                        <input type="number" class="percent" id="corrugationsval" value="0" style="width: 3em">
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="height: 1px; width: 290px" class="center">
+
+                                    <a href="#" id="treelossofsection">Loss of Section</a>&nbsp;
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="lossofsectionlvl0" name="lossofsectionlvl" value="0" checked="checked"> 0 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="lossofsectionlvl1" name="lossofsectionlvl" value="1"> 1 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="lossofsectionlvl2" name="lossofsectionlvl" value="2"> 2 </label>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center">
+
+                                    <label>
+
+                                        <input type="radio" id="lossofsectionlvl3" name="lossofsectionlvl" value="3"> 3 </label>
+
+                                </td>
+
+                                <td style="text-align:center;">
+
+                                    <span class="form-sub-label">
+
+                                        <input type="number" class="percent" id="lossofsectionval" value="0" style="width: 3em">
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="width: 290px" class="center">
+
+                                    <a>Cracking Width > 1/8 inch</a>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center" colspan="5">
+
+                                    <input type="checkbox" name="value" value="1" id="crackingwidth"></input>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="width: 290px" class="center" rowspan="2">
+
+                                    <a href="#" id="treerutting">Rutting</a>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center" colspan="2">
+
+                                    <a>Inside Wheel Path</a>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center" colspan="3">
+
+                                    <a>Outside Wheel Path</a>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="height: 1px; width: 192px" class="center" colspan="2">
+
+                                    <span class="form-sub-label">
+
+                                        <select name="value" class="eighth-inch" id="ruttingin" required>
+
+                                            <option value="0"> 0 (1/8 inch)</option>
+
+                                            <option value="1"> 1 (1/8 inch)</option>
+
+                                            <option value="2"> 2 (1/8 inch)</option>
+
+                                            <option value="3"> 3 (1/8 inch)</option>
+
+                                            <option value="4"> 4 (1/8 inch)</option>
+
+                                            <option value="5"> 5 (1/8 inch)</option>
+
+                                            <option value="6"> 6 (1/8 inch)</option>
+
+                                            <option value="7"> > 6 (1/8 inch)</option>
+
+                                        </select>
+
+                                    </span>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center" colspan="3">
+
+                                    <span class="form-sub-label">
+
+                                        <select name="value" class="eighth-inch" id="ruttingout" required>
+
+                                            <option value="0"> 0 (1/8 inch)</option>
+
+                                            <option value="1"> 1 (1/8 inch)</option>
+
+                                            <option value="2"> 2 (1/8 inch)</option>
+
+                                            <option value="3"> 3 (1/8 inch)</option>
+
+                                            <option value="4"> 4 (1/8 inch)</option>
+
+                                            <option value="5"> 5 (1/8 inch)</option>
+
+                                            <option value="6"> 6 (1/8 inch)</option>
+
+                                            <option value="7"> > 6 (1/8 inch)</option>
+
+                                        </select>
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="width: 290px" class="center">
+
+                                    <a href="#" id="treepatches">Patches/Potholes</a>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center" colspan="5">
+
+                                    <span class="form-sub-label">
+
+                                        <select name="value" class="number" id="potholes">
+
+                                            <option value="0"> 0 </option>
+
+                                            <option value="1"> 1 </option>
+
+                                            <option value="2"> 2 </option>
+
+                                            <option value="3"> 3 </option>
+
+                                            <option value="4"> 4 </option>
+
+                                            <option value="5"> 5 </option>
+
+                                            <option value="6"> 6 </option>
+
+                                            <option value="7"> 7 </option>
+
+                                            <option value="8"> 8 </option>
+
+                                            <option value="9"> 9 </option>
+
+                                            <option value="10"> 10 </option>
+
+                                            <option value="11"> 11 </option>
+
+                                            <option value="12"> 12 </option>
+
+                                            <option value="13"> 13 </option>
+
+                                            <option value="14"> 14 </option>
+
+                                            <option value="15"> 15 </option>
+
+                                            <option value="16"> 16 </option>
+
+                                            <option value="17"> 17 </option>
+
+                                            <option value="18"> 18 </option>
+
+                                            <option value="19"> 19 </option>
+
+                                            <option value="20"> 20 </option>
+
+                                            <option value="21"> > 20 </option>
+
+                                        </select>
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="width: 290px" class="center">
+
+                                    <a>AADT</a>
+
+                                </td>
+
+                                <td style="height: 1px; width: 192px" class="center" colspan="5">
+
+                                    <span class="form-sub-label">
+                                        <input type="number" class="percent" id="aadt" value="0" style="width: 3.5em">
+
+                                        
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                        </table>
+
+                        <br>
+
+                        <br/>
+
+                        <input type="submit" value="Get Recommendations" onclick="hitSubmit()">
+                    </div>
+                    <br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/><br><br/>
+                    <div style="padding-bottom: 20px;">
+                        <b id="rating" style="font-size: 200%; text-align: center; display: none">Rating: </b>
+                    </div>
+
+                    <div>
+
+                        <b id="No Suggestions" style="font-size: 100%; text-align: center; display: none;">No Suggestions for this data!</b>
+
+                    </div>
+
+                    <div style="text-align: center; flex-wrap: wrap; display: table; width: 100%; border-collapse: collapse;">
+
+                        <div style="display: table-row;">
+
+                            <a id="CrackingSeal" style="display: none; padding-bottom: 20px;" href="#">
+
+                                <img height="100" width="100" src="images/cracksealing0.png">
+
+                            </a>
+
+                            <a href="#" id="ChipSeal" style="display: none; padding-bottom: 20px;"  >
+
+                                <img height="100" width="100" src="images/chipseal0.png" >
+
+                            </a>
+
+                            <a id="FogSeal" style="display: none; padding-bottom: 20px;" href="#">
+
+                                <img height="100" width="100" src="images/fogseal0.png">
+
+                            </a>
+
+                        </div>
+
+                        <div style="display: table-row">
+
+                            <a id="MicroMilling" style="display: none; padding-bottom: 20px;" href="#">
+
+                                <img height="100" width="100" src="images/micromilling0.png">
+
+                            </a>
+
+                            <a id="MicroSurfacing" style="display: none;" href="#">
+
+                                <img height="100" width="100" src="images/microsurfacing0.png">
+
+                            </a>
+
+                            <a id="ThinOverlay" style="display: none; padding-bottom: 20px;" href="#">
+
+                                <img height="100" width="100" src="images/thinoverlay0.png">
+
+                            </a>
+
+                        </div>
+
+                        <div style="display: table-row">
+
+                            <a id="Diamond Grinding" style="display: none; padding-bottom: 20px;" href="pcc/diamondgrinding.html">
+
+                                <img height="100" width="100" src="images/diamondgrinding0.png">
+
+                            </a>
+
+                            <a id="Dowel Bar Retrofit" style="display: none; padding-bottom: 20px;" href="acc/dbr.html">
+
+                                <img height="100" width="100" src="images/dbr0.png">
+
+                            </a>
+
+                            <a id="Full Depth Repair" style="display: none; padding-bottom: 20px;" href="pcc/fdr.html">
+
+                                <img height="100" width="100" src="images/fdr0.png">
+
+                            </a>
+
+                        </div>
+
+                        <div style="display: table-row">
+
+                            <a id="Joint Sealing" style="display: none; padding-bottom: 20px;" href="pcc/jointsealing.html">
+
+                                <img height="100" width="100" src="images/jointsealing0.png">
+
+                            </a>
+
+                            <a id="Partial Depth Repair" style="display: none; padding-bottom: 20px;" href="acc/pdr.html">
+
+                                <img height="100" width="100" src="images/pdr0.png">
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+        </div>
+      
+ 
+ <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+
+           $(document).ready( function() {
+                $("#treeloadcracking1").on("click", function() {
+                    $("#contentcolumn").load("embed/LoadCracking.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#treeloadcracking2").on("click", function() {
+                    $("#contentcolumn").load("embed/LoadCracking.html");
+                });
+            });
+
+             $(document).ready( function() {
+                $("#treeloadcracking3").on("click", function() {
+                    $("#contentcolumn").load("embed/LoadCracking.html");
+                });
+            });
+
+              $(document).ready( function() {
+                $("#treeloadcracking4").on("click", function() {
+                    $("#contentcolumn").load("embed/LoadCracking.html");
+                });
+            });
+
+           $(document).ready( function() {
+                $("#treeblockcracking").on("click", function() {
+                    $("#contentcolumn").load("embed/BlockCracking.html");
+                });
+            });
+
+           $(document).ready( function() {
+                $("#treeedgedistress").on("click", function() {
+                    $("#contentcolumn").load("embed/EdgeDistress.html");
+                });
+            });
+
+           $(document).ready( function() {
+                $("#treeraveling").on("click", function() {
+                    $("#contentcolumn").load("embed/Raveling.html");
+                });
+            });
+
+           $(document).ready( function() {
+                $("#treebleeding").on("click", function() {
+                    $("#contentcolumn").load("embed/Bleeding.html");
+                });
+            });
+
+           $(document).ready( function() {
+                $("#treereflection").on("click", function() {
+                    $("#contentcolumn").load("embed/Reflection.html");
+                });
+            });
+
+           $(document).ready( function() {
+                $("#treecorrugations").on("click", function() {
+                    $("#contentcolumn").load("embed/Corrugation.html");
+                });
+            });
+
+           $(document).ready( function() {
+                $("#treelossofsection").on("click", function() {
+                    $("#contentcolumn").load("embed/LossSection.html");
+                });
+            });
+
+           $(document).ready( function() {
+                $("#treerutting").on("click", function() {
+                    $("#contentcolumn").load("embed/RutDepth.html");
+                });
+            });
+
+           $(document).ready( function() {
+                $("#treepatches").on("click", function() {
+                    $("#contentcolumn").load("embed/Patches.html");
+                });
+            });
+
+
+
+
+           $(document).ready( function() {
+                $("#ChipSeal").on("click", function() {
+                    $("#contentcolumn").load("embed/chipseal.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#ThinOverlay").on("click", function() {
+                    $("#contentcolumn").load("embed/thinoverlay.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#CrackingSeal").on("click", function() {
+                    $("#contentcolumn").load("embed/cracksealing.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#FogSeal").on("click", function() {
+                    $("#contentcolumn").load("embed/fogseal.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#MicroMilling").on("click", function() {
+                    $("#contentcolumn").load("embed/micromilling.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#MicroSurfacing").on("click", function() {
+                    $("#contentcolumn").load("embed/microsurfacing.html");
+                });
+            });
+        </script>
+    </body>
+
+
+
+</html>

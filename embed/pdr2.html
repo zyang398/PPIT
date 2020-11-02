@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="w3-container" id="justanormalcolumn">
+        <br />
+        <div class="w3-center" style="height: 168px">
+            <a href="#" id="pdr">
+                <img alt="" height="161" src="images/pdr0.png" width="285" />
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            <br />
+            <br />
+        </div>
+        <div class="w3-bar w3-white ">
+            <a href="#" id="pdr1" class="w3-bar-item w3-button w3-mobile w3-white w3-border">General</a>
+            <a href="#" id="pdr2" class="w3-bar-item w3-button w3-mobile w3-grey w3-border">Project Selection</a>
+            <a href="#" id="pdr3" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Material</a>
+            <a href="#" id="pdr4" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Construction</a>
+            <a href="#" id="pdr5" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Performance</a>
+            <a href="#" id="pdr6" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Standards/References</a>
+        </div>
+        <p class="MsoNormal">The distress of concrete is either structural or functional. Typical structural distress includes cracking and joint deterioration, while typical functional di  stress includes loading, long joint-spacing, shallow or late joint sawing, base or edge restraint and joint lock-up(ACPA, 1997 ).</p>
+        <p class="MsoNormal">Suitable candidate for PDR:</p>
+        <p class="MsoNormal">• Concrete Pavement with Spalling distress which is caused by the intrusion of incompressible materials into the joints and cracks, by poor consolidation or inadequate curing, by localized areas of scaling, weak concrete, clay balls, or high steel.</p>
+        <p class="MsoNormal">• Concrete Pavement with Surface scaling or deterioration in the top third of the slab caused by an inadequate air void system. (FHWA, 2015; Frentress & Harrington, 2012; Irene K. Battaglia, 2012)</p>
+        <p class="MsoNormal">Not Suitable candidates for PDR:</p>
+        <p class="MsoNormal">• Concrete Pavement with spalling of cracks caused by shrinkage, fatigue or foundation movement.</p>
+        <p class="MsoNormal">• The cases either suitable or not suitable by different authors.</p>
+        <p class="MsoNormal">• Concrete Pavement with spalling caused by dowel bar misalignment or lockup.</p>
+        <p class="MsoNormal">• Spalling caused by D‐cracking or reactive aggregate is recommend by some agencies while not by others(Irene K. Battaglia, 2012).</p>
+
+
+
+
+
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+
+            $(document).ready( function() {
+                $("#pdr").on("click", function() {
+                    $("#contentcolumn").load("embed/pdr.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pdr1").on("click", function() {
+                    $("#contentcolumn").load("embed/pdr.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pdr2").on("click", function() {
+                    $("#contentcolumn").load("embed/pdr2.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pdr3").on("click", function() {
+                    $("#contentcolumn").load("embed/pdr3.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pdr4").on("click", function() {
+                    $("#contentcolumn").load("embed/pdr4.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pdr5").on("click", function() {
+                    $("#contentcolumn").load("embed/pdr5.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#pdr6").on("click", function() {
+                    $("#contentcolumn").load("embed/pdr6.html");
+                });
+            });
+
+
+
+    </script>
+
+
+
+</body>
+</html>

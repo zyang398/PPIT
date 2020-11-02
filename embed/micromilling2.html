@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="w3-container" id="justanormalcolumn">
+        <br />
+        <div class="w3-center" style="height: 168px">
+            <a href="#" id="mmmicromilling">
+                <img alt="" height="160" src="images/micromilling0.png" width="280" />
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            <br />
+            <br />
+        </div>
+        <div class="w3-bar w3-white ">
+            <a href="#" id="mmmicromilling1" class="w3-bar-item w3-button w3-mobile w3-white w3-border">General</a>
+            <a href="#" id="mmmicromilling2" class="w3-bar-item w3-button w3-mobile w3-grey w3-border">Project Selection</a>
+            <a href="#" id="mmmicromilling3" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Material</a>
+            <a href="#" id="mmmicromilling4" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Construction</a>
+            <a href="#" id="mmmicromilling5" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Performance</a>
+            <a href="#" id="mmmicromilling6" class="w3-bar-item w3-button w3-mobile w3-white w3-border">Standards/References</a>
+        </div>
+        <p class="MsoNormal">
+            <span style="color:black;mso-themecolor:text1">
+                Micromilling &amp; thin overlay is used to replace only the
+                top, worn-out porous asphalt layer (e.g., OGFC and PEM)
+                while the underlying layer (e.g., SMA) is in good
+                condition. The rule of thumb for selecting micromilling
+                &amp; thin overlay project is the underlying layers must be
+                structurally sound. The following are guidelines for the
+                selection of micro-milling projects:<o:p></o:p>
+            </span>
+        </p>
+        <p class="MsoNormal">&bull; The porous layer (e.g., OGFC and PED) wears out. For example, extensive raveling on the surface layer.</p>
+        <p class="MsoNormal">&bull; Three factors are used to check for micromilling suitability: core, rutting, and Hamburg test.</p>
+        <p class="MsoNormal">&bull; Rutting: limited rutting (less than 1&#8260;4"). Rutting greater than 1&#8260;4" is a concern.</p>
+        <p class="MsoNormal">&bull; Core: measure the deformation of each layer to identify the underneath pavement structure</p>
+        <p class="MsoNormal">&bull; Hamburg test: 12.5 mm is the failure threshold. </p>
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+
+            $(document).ready( function() {
+                $("#mmmicromilling").on("click", function() {
+                    $("#contentcolumn").load("embed/micromilling.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#mmmicromilling1").on("click", function() {
+                    $("#contentcolumn").load("embed/micromilling.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#mmmicromilling2").on("click", function() {
+                    $("#contentcolumn").load("embed/micromilling2.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#mmmicromilling3").on("click", function() {
+                    $("#contentcolumn").load("embed/micromilling3.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#mmmicromilling4").on("click", function() {
+                    $("#contentcolumn").load("embed/micromilling4.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#mmmicromilling5").on("click", function() {
+                    $("#contentcolumn").load("embed/micromilling5.html");
+                });
+            });
+
+            $(document).ready( function() {
+                $("#mmmicromilling6").on("click", function() {
+                    $("#contentcolumn").load("embed/micromilling6.html");
+                });
+            });
+
+
+    </script>
+</body>
+</html>

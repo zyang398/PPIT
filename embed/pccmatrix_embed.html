@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript">
+        function selectTreatment() {
+        	var fau = document.getElementById("fau").checked;
+        	var tra1 = document.getElementById("tra1").checked;
+        	var tra2 = document.getElementById("tra2").checked;
+        	var lon1 = document.getElementById("lon1").checked;
+        	var lon2 = document.getElementById("lon2").checked;
+        	var cor = document.getElementById("cor").checked;
+        	var sha = document.getElementById("sha").checked;
+        	var rep = document.getElementById("rep").checked;
+        	var fai = document.getElementById("fai").checked;
+        	var jspall = document.getElementById("jspall").checked;
+        	var jpatched = document.getElementById("jpatched").checked;
+        	var jfailed = document.getElementById("jfailed").checked;
+        	var sho = document.getElementById("sho").checked;
+        	var rou = document.getElementById("rou").checked;
+
+
+        	
+
+
+        	if (fau == false && tra1 == false && tra2 == false && lon1 == false && lon2 == false && cor == false && sha == false && rep == false && fai == false && jspall == false && jpatched == false && jfailed == false && sho == false && rou == false){
+
+                    document.getElementById("selectedTreat").innerHTML = "";
+                    document.getElementById("selectedTreat").style.display = "block";
+                    a0 = document.createElement('a');
+                    a0.id = "treatments"
+                    a0.setAttribute('class', "");
+                    a0.setAttribute('align', "center");
+                    document.getElementById("selectedTreat").appendChild(a0)
+        		document.getElementById("selectedTreat").appendChild(document.createTextNode("   "));
+        		document.getElementById("selectedTreat").appendChild(document.createTextNode("Please Select Pavement Conditions"))
+        	}
+        	else{
+        		var D=[1,1,1,1,1,1];
+        		if (tra1 == true || tra2 == true || lon1 == true || lon2 == true || cor == true || sha == true || rep == true || fai == true || jspall == true|| jpatched == true || jfailed == true || rou == true){
+        		D[0]=0;
+        	}
+        	if (tra1 == true || tra2 == true || lon1 == true || lon2 == true || cor == true || sha == true || rep == true || fai == true || jspall == true|| jpatched == true || jfailed == true || sho == true){
+        		D[1]=0;
+        	}
+        	if (fau == true || cor == true || sha == true || rep == true || fai == true || jspall == true|| jpatched == true || jfailed == true || sho == true || rou == true){
+        		D[2]=0;
+        	}
+        	if (fau == true || tra1 == true || lon1 == true || cor == true || sha == true || rep == true || fai == true || jspall == true|| jpatched == true || jfailed == true || sho == true || rou == true){
+        		D[3]=0;
+        	}
+        	if (fau == true || tra1 == true || tra2 == true || lon1 == true || lon2 == true || sha == true || rep == true || fai == true || jpatched == true || sho == true || rou == true){
+        		D[4]=0;
+        	}
+        	if (tra1 == true || tra2 == true || lon1 == true || lon2 == true || jspall == true || sho == true || rou == true){
+        		D[5]=0;
+        	}
+
+        	 document.getElementById("recommend").style.display = "block";
+                    document.getElementById("selectedTreat").innerHTML = "";
+                    document.getElementById("selectedTreat").style.display = "block";
+                    a0 = document.createElement('a');
+                    a0.id = "treatments"
+                    a0.setAttribute('class', "");
+                    a0.setAttribute('align', "center");
+                    document.getElementById("selectedTreat").appendChild(a0)
+
+        	 if (D[1] == 1) {
+                            a1 = document.createElement('a');
+                            a1.id = "diamondgrinding"
+                            a1.setAttribute('href', "#");
+                            //a1.setAttribute('target', "_blank");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/diamondgrinding0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                           $(document).ready( function() {
+                                $("#diamondgrinding").on("click", function() {
+                                    $("#contentcolumn").load("embed/diamondgrinding.html");
+                                });
+                            });
+                        }
+            if (D[0] == 1) {
+                            a1 = document.createElement('a');
+                            a1.id = "jointsealing"
+                            a1.setAttribute('href', "#");
+                            //a1.setAttribute('target', "_blank");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/jointsealing0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                           $(document).ready( function() {
+                                $("#jointsealing").on("click", function() {
+                                    $("#contentcolumn").load("embed/jointsealing.html");
+                                });
+                            });
+                        }
+            if (D[2] == 1) {
+                            a1 = document.createElement('a');
+                            a1.id = "cracksealing"
+                            a1.setAttribute('href', "#");
+                            //a1.setAttribute('target', "_blank");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/cracksealing0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                           $(document).ready( function() {
+                                $("#cracksealing").on("click", function() {
+                                    $("#contentcolumn").load("embed/cracksealing.html");
+                                });
+                            });
+                        }
+            if (D[3] == 1) {
+                            a1 = document.createElement('a');
+                            a1.id = "patching"
+                            a1.setAttribute('href', "#");
+                            //a1.setAttribute('target', "_blank");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/mastic0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                           $(document).ready( function() {
+                                $("#patching").on("click", function() {
+                                    $("#contentcolumn").load("embed/pothole.html");
+                                });
+                            });
+                        }
+            if (D[4] == 1) {
+                            a1 = document.createElement('a');
+                            a1.id = "spallrepair"
+                            a1.setAttribute('href', "#");
+                            //a1.setAttribute('target', "_blank");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/pdr0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                           $(document).ready( function() {
+                                $("#spallrepair").on("click", function() {
+                                    $("#contentcolumn").load("embed/pdr.html");
+                                });
+                            });
+                        }
+            if (D[5] == 1) {
+                            a1 = document.createElement('a');
+                            a1.id = "fulldepth"
+                            a1.setAttribute('href', "#");
+                            //a1.setAttribute('target', "_blank");
+                            a2 = document.createElement('img');
+                            a2.id = "img2"
+                            a2.setAttribute('height', "100");
+                            a2.setAttribute('width', "100");
+                            a2.setAttribute('src', "images/fdr0.png");
+                            a1.appendChild(a2)
+                            document.getElementById("selectedTreat").appendChild(a1)
+                           $(document).ready( function() {
+                                $("#fulldepth").on("click", function() {
+                                    $("#contentcolumn").load("embed/fdr.html");
+                                });
+                            });
+                        }
+            document.getElementById("selectedTreat").appendChild(document.createTextNode("   "));
+            if (D[0] == 0 && D[1] == 0 && D[2] == 0 && D[3] == 0 && D[4] == 0 && D[5] == 0)
+            document.getElementById("selectedTreat").appendChild(document.createTextNode("No common recommendation"));
+
+        	console.log(D);
+        }
+    }
+
+    </script>
+    <style type="text/css">
+        .auto-style3 {
+            text-align: left;
+        }
+
+        .auto-style4 {
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="w3-container" id="justanormalcolumn" style="height: 1600px">
+        <div class="innertube" style="height: 224px; text-align: center;">
+            <h2><a href="decisionmatrix/PCCDecisionMatrix.pdf" target="_blank">PCC Pavement Treatment Selection</a></h2>
+            <hr />
+
+            <p>&nbsp;</p>
+            <!--  <p class="auto-style3" style="height: 44px">
+                 <span>
+                     COPACES Rating:
+                     <input type="text" id="rate" value="0">
+                     <input type="button" value="submit" onclick="ratecounter()"> -->
+            <!--  <script language="javascript" type="text/javascript">
+                 function ratecounter() {
+                     var rates = document.getElementById("rate").value;
+                     //}
+                     if (rates < 75) {
+                         document.getElementById('demo1').style.display = "block";
+                     } else {
+                         document.getElementById('demo').style.display = "block";
+                     }
+                 }
+             </script> -->
+            </span>
+            </p>
+            <div id="demo1" style="display:none">
+                <br />
+                <p class="auto-style4">
+                    <strong> NO PRESERVATION RECOMMENDED!</strong>
+                </p>
+                <br />
+                <input name="Button1" type="button" value="Reset" onclick="window.location.reload()" style="width: 62px; height: 30px" />
+            </div>
+            <div id="demo">
+                <!-- <table style="width: 90%; height: 183px;" align="center"> -->
+                <style>
+                    table {
+                        font-family: arial, sans-serif;
+                        border-collapse: collapse;
+                        width: 100%;
+                    }
+
+                    td,
+                    th {
+                        border: 1px solid #dddddd;
+                        text-align: left;
+                        padding: 8px;
+                    }
+
+                    tr:nth-child(even) {
+                        background-color: #dddddd;
+                    }
+                </style>
+                <table>
+                    <tr>
+                        <td style="width: 290px" class="center" colspan="5">
+                            <span lang="zh-cn">
+                                <strong>Pavement Conditions</strong>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 1px; width: 290px" class="center">
+                            <a href="PACESManual/faulting.html" target="_blank">Faulting</a>&nbsp;
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center" colspan="2">
+                            <input type="checkbox" id="fau" />
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td style="height: 1px; width: 290px" class="center">
+                            <a href="PACESManual/transversecrack.html" target="_blank">Transverse Cracking</a>&nbsp;
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            Level 1
+                            <input type="checkbox" id="tra1" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            Level 2
+                            <input type="checkbox" id="tra2" />
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td style="width: 290px" class="center">
+                            <a href="PACESManual/longitudinalcracks.html" target="_blank">Longitudinal Cracking</a>
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            Level 1
+                            <input type="checkbox" id="lon1" />
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center">
+                            Level 2
+                            <input type="checkbox" id="lon2" />
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td style="width: 290px" class="center">
+                            <a href="PACESManual/cornerbreak.html" target="_blank">Corner Breaks</a>
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center" colspan="2">
+                            <input type="checkbox" id="cor" />
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="width: 290px" class="center">
+                            <a href="PACESManual/shatteredslabs.html" target="_blank">Shattered Slab</a>
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center" colspan="2">
+                            <input type="checkbox" id="sha" />
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="width: 290px; height: 28px" class="center">
+                            <a href="PACESManual/replacedslabs.html" target="_blank">Replaced Slabs</a>
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center" colspan="2">
+                            <input type="checkbox" id="rep" />
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="width: 290px; height: 28px" class="center">
+                            <a href="PACESManual/failedslab.html" target="_blank">Failed Slabs</a>&nbsp;
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center" colspan="2">
+                            <input type="checkbox" id="fai" />
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="width: 290px; height: 28px" class="center">
+                            <a href="PACESManual/jointspall.html" target="_blank">Joints W/Spall</a>
+                            <!-- reference needs changing-->
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center" colspan="2">
+                            <input type="checkbox" id="jspall" />
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="width: 290px; height: 28px" class="center">
+                            <a href="PACESManual/jointspatchedspall.html" target="_blank">Joints W/Patched Spall</a>
+                            <!-- reference needs changing-->
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center" colspan="2">
+                            <input type="checkbox" id="jpatched" />
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="width: 290px; height: 28px" class="center">
+                            <a href="PACESManual/jointfailedspall.html" target="_blank">Joints W/Failed Spall</a>
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center" colspan="2">
+                            <input type="checkbox" id="jfailed" />
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="height: 1px; width: 290px" class="center">
+                            <a href="PACESManual/shoulderjoint.html" target="_blank">Shoulder Joint Distress</a>&nbsp;
+                            <!-- reference needs changing-->
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center" colspan="2">
+                            <input type="checkbox" id="sho" />
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="height: 1px; width: 290px" class="center">
+                            <a>Roughness</a>&nbsp;
+                            <!-- reference needs changing-->
+                        </td>
+                        <td style="height: 1px; width: 192px" class="center" colspan="2">
+                            <input type="checkbox" id="rou" />
+                        </td>
+
+                    </tr>
+                </table>
+
+                <br />
+                <input name="SelectMaterial" type="button" value="Select Treatment(s)" onclick="selectTreatment()" style="height: 30px" />
+                <input name="Button2" type="button" value = "Reset" id="reset" style="width: 62px; height: 30px" />
+            </div>
+
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <br />
+
+        <div class="w3-center" id="recommend" style="display: none; height: 30px">Recommended Preservation Methods:</div>
+
+        <div id="selectedTreat" class="w3-center" style="display: none;">
+        </div>
+        <div id="contentcolumn-bottom"></div>
+
+    </div>
+
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script>
+
+            $(document).ready( function() {
+                $("#reset").on("click", function() {
+                    $("#contentcolumn").load("embed/pccmatrix_embed.html");
+                });
+            });
+
+    </script>
+</body>
+
+</html>
